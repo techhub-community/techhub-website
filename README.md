@@ -32,6 +32,8 @@ https://github.com/techhub-community/techhub-website/tree/develop) branch.
 
 ## Learn More (Video Lectures)
 
+- [Learn Git & Github ](https://www.youtube.com/watch?v=RGOj5yH7evk&t=296s) -  for beginners.
+
 - [Learn HTML,CSS & JS ](https://www.youtube.com/watch?v=_GTMOmRrqkU) - quick overview of the web basics.
 
 - [Learn NextJS ](https://www.youtube.com/watch?v=mTz0GXj8NN0) - Next.js Crash Course .
@@ -40,6 +42,8 @@ https://github.com/techhub-community/techhub-website/tree/develop) branch.
 - [Learn Tailwind CSS](https://www.youtube.com/watch?v=UBOj6rqRUME&t=378s) - Tailwind CSS Crash Course.
 
 ## Learn More (Documentations)
+
+- [Learn Git & Github](https://guides.github.com/introduction/git-handbook/) - as Handbook.
 
 - [Learn HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Mozilla Developer Network.
 
