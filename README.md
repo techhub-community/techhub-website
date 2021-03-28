@@ -1,8 +1,6 @@
-# techhub-landing
+# techhub-website
 
-Landing page of TechHub using nextJS &amp; Tailwind CSS
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Website of TechHub Community using [NextJS](https://nextjs.org/) &amp; [Tailwind CSS](https://www.tailwindcss.com/)
 
 ## Getting Started
 
@@ -20,23 +18,37 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contribution
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Follow these steps to contribute to this project.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Fork this repository.
+2. Install the requirements using `yarn` and run the project.
+3. Go to [`develop`](
+https://github.com/techhub-community/techhub-website/tree/develop) branch.
+4. Make changes and create `pull requests (PR)` to `develop` branch only.
+5. Your `PR` will be reviewed and will be merged to the develop branch only.
+6. Upon ample PR merge to develop branch, all PRs will be merged to `main` branch & will be live.
 
-## Learn More
+## Learn More (Video Lectures)
 
-To learn more about Next.js, take a look at the following resources:
+- [Learn HTML,CSS & JS ](https://www.youtube.com/watch?v=_GTMOmRrqkU) - quick overview of the web basics.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Learn NextJS ](https://www.youtube.com/watch?v=mTz0GXj8NN0) - Next.js Crash Course .
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+- [Learn Tailwind CSS](https://www.youtube.com/watch?v=UBOj6rqRUME&t=378s) - Tailwind CSS Crash Course.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Learn More (Documentations)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Learn HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Mozilla Developer Network.
+
+- [Learn CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Mozilla Developer Network.
+
+- [Learn JS](https://developer.mozilla.org/en-US/docs/Web/JS) - Mozilla Developer Network.
+
+- [Learn NextJS ](https://nextjs.org/docs/getting-started) - Next.js docs.
+
+
+- [Learn Tailwind CSS](https://tailwindcss.com/docs) - Tailwind CSS docs.
+
