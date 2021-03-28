@@ -24,9 +24,9 @@ Follow these steps to contribute to this project.
 
 1. Fork this repository.
 2. Install the requirements using `yarn` and run the project.
-3. Go to [`develop`](
-https://github.com/techhub-community/techhub-website/tree/develop) branch.
-4. Make changes and create `pull requests (PR)` to `develop` branch only.
+3. Go to [`dev`](
+https://github.com/techhub-community/techhub-website/tree/dev) branch.
+4. Make changes and create `pull requests (PR)` to `dev` branch only.
 5. Your `PR` will be reviewed and will be merged to the develop branch only.
 6. Upon ample PR merge to develop branch, all PRs will be merged to `main` branch & will be live.
 
