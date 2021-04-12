@@ -78,7 +78,7 @@ export default function Home() {
             d="M27,52h10c1.103,0,2-0.897,2-2v-2c0-1.103-0.897-2-2-2H27c-1.103,0-2,0.897-2,2v2 C25,51.103,25.897,52,27,52z M27,48h10v2H27V48z"
           />
         </svg>
-        <h3 className="bg-[lightblue] px-3 rounded my-2">Something is cooking up &#128516;</h3>
+        <h3 className="bg-[lightblue] px-12 py-4 rounded my-2">Something is cooking up &#128516;</h3>
         <p>Will be baked & served to you soon &#128151;</p>
       </main>
     </div>
