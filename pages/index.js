@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import React, { useState, useEffect } from 'react';
 import Navbar from "../components/Navbar";
-import Dropdown from "../components/dropdown";
+import Dropdown from "../components/Dropdown";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
