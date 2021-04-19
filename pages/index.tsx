@@ -1,15 +1,24 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>TechHub Community</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home - TechHub :: Community</title>
       </Head>
+      <div className="text-center">
+        <a href="https://github.com/techhub-community" target="_blank">
+          <img className="text-center my-12 w-80" src="/assets/logo/logo-full-transparent.png"/>
+        </a>
+      </div>
+      <div className="flex flex-col md:flex-row items-center gap-4 text-center">
+        <a href="https://discord.com/invite/EMEMejk8P5"><img src="https://img.shields.io/discord/814219041614594078?label=Join%20Us%20-%20Discord" alt=""/></a>
+        <a href="mailto:hello@tech-hub.org"><img src="https://img.shields.io/badge/Contact%20Us-hello%40tech--hub.org-orange" alt=""/></a>
+        <a href="https://github.com/techhub-community"> <img src="https://img.shields.io/github/stars/techhub-community?label=Github%20Stars&amp;style=plastic" alt="GitHub Org&#39;s stars"/></a>
+      </div>
 
-      <main className={styles.main}>
+      <div className={styles.main}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
@@ -78,9 +87,9 @@ export default function Home() {
             d="M27,52h10c1.103,0,2-0.897,2-2v-2c0-1.103-0.897-2-2-2H27c-1.103,0-2,0.897-2,2v2 C25,51.103,25.897,52,27,52z M27,48h10v2H27V48z"
           />
         </svg>
-        <h3>Something is cooking up &#128516;</h3>
+        <h3 className="rounded my-2">Something is cooking up &#128516;</h3>
         <p>Will be baked & served to you soon &#128151;</p>
-      </main>
+      </div>
     </div>
   );
 }
