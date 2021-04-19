@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import React, { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar";
-import Dropdown from "../components/Dropdown";
+import Navbar from "components/Navbar";
+import Dropdown from "components/Dropdown";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function Home() {
     <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
     <div className={styles.container}>
-      
+
       <Head>
         <title>Home - TechHub :: Community</title>
       </Head>
@@ -45,7 +45,7 @@ export default function Home() {
         <a href="https://github.com/techhub-community"> <img src="https://img.shields.io/github/stars/techhub-community?label=Github%20Stars&amp;style=plastic" alt="GitHub Org&#39;s stars"/></a>
       </div>
 
-      
+
     </div>
     </>
   );
