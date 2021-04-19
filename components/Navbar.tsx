@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = ({ toggle }) => {
     return (
         <nav
-            className='flex justify-between items-center h-16 bg-elephant_900 text-elephant_50 relative shadow-sm font-mono md:px-12'
+            className='flex justify-between items-center h-16 bg-black-900 text-black-50 relative shadow-sm font-mono md:px-12'
             role='navigation'
         >
             <a href="/" className="pl-8">
