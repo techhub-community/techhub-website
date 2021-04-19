@@ -28,14 +28,14 @@ const Navbar = ({ toggle }) => {
             <div className='pr-8 md:block uppercase tracking-widest  hidden'>
                 <a href='/' className='p-6'>
                     Home
-        </a>
+                </a>
 
                 <a href='/about' className='p-6'>
                     About
-        </a>
+                </a>
                 <a href='/contact' className='p-6'>
                     Contact
-        </a>
+                </a>
             </div>
         </nav>
     )
