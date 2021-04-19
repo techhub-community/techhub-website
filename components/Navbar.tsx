@@ -3,11 +3,11 @@ import React from 'react'
 const Navbar = ({ toggle }) => {
     return (
         <nav
-            className='flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono md:px-12'
+            className='flex justify-between items-center h-16 bg-elephant_900 text-elephant_50 relative shadow-sm font-mono md:px-12'
             role='navigation'
         >
             <a href="/" className="pl-8">
-            <img className="object-cover p-1 h-12 md:h-14" src="/assets/logo/logo-full-transparent.png"/>
+            <img className="object-cover p-1 h-12 md:h-14" src="/assets/logo/logo-dark-full-transparent.png"/>
             </a>
             <div className='px-4 cursor-pointer md:hidden'onClick={toggle}>
                 <svg

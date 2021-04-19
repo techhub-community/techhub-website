@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    colors: {
+      elephant_900: "#121b20",
+      elephant_50: "#f4f5f6"
+    }
   },
   variants: {
     extend: {},
