@@ -20,5 +20,21 @@
     "sass": "^1.32.10",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.2.4"
-  }
+  },
+  "description": "Website of TechHub Community using [NextJS](https://nextjs.org/) &amp; [Tailwind CSS](https://www.tailwindcss.com/)",
+  "main": "postcss.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techhub-community/techhub-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techhub-community/techhub-website/issues"
+  },
+  "homepage": "https://github.com/techhub-community/techhub-website#readme"
 }
