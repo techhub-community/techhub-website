@@ -42,7 +42,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/contact">
                 <span className="text-black-600 hover:text-brand-700 hover:text-bold">
                   Contact
                 </span>
@@ -115,7 +115,7 @@ const Navbar = () => {
                 </Link>
                 <Link href="/contact">
                   <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                    Home
+                    Contact
                   </li>
                 </Link>
                 <Link href="https://kutt.it/techhub-invite">
