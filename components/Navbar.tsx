@@ -15,17 +15,7 @@ const Navbar = () => {
   return (
     <header className="z-30 w-full pl-4 md:px-8 py-4 bg-white sm:px-4">
       <div className="container flex items-center justify-between mx-auto">
-        <Link href="/">
-          <span className="flex items-center">
-            <img
-              src="/assets/logo/logo-full-transparent.png"
-              alt="TechHub Logo"
-              className="h-12"
-            />
-            <span className="sr-only">TechHub</span>
-          </span>
-        </Link>
-        <div>
+        <div className="px-12">
           <ul className="relative hidden space-x-10 uppercase tracking-widest md:inline-flex rtl:space-x-reverse">
             <li>
               <Link href="/">
@@ -50,6 +40,16 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <Link href="/">
+          <span className="flex items-center">
+            <img
+              src="/assets/logo/logo-full-transparent.png"
+              alt="TechHub Logo"
+              className="h-12"
+            />
+            <span className="sr-only">TechHub</span>
+          </span>
+        </Link>
         <div className="flex items-center space-x-5 rtl:space-x-reverse">
           <div className="hidden md:flex">
             <div className="flex flex-row gap-3 place-items-center mr-4">

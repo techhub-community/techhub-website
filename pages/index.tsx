@@ -7,6 +7,7 @@ import QOD from '@/components/QOD';
 import Team from '@/components/Team';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import Services from '@/components/Services';
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
         <Hero />
         <QOD />
         <Stats />
-        <Team />
+        <Services />
         <CTA />
+        <Team />
         <Footer />
       </div>
     </>

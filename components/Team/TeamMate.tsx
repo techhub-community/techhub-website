@@ -12,7 +12,7 @@ export default function TeamMate() {
       <div className="flex flex-col items-center justify-center">
         <img
           className="rounded-full"
-          src="https://via.placeholder.com/150"
+          src="https://picsum.photos/200"
           alt="team 1"
         />
         <h2 className="text-xl font-medium mt-6">John Doe</h2>
