@@ -14,32 +14,7 @@ const Navbar = () => {
   };
   return (
     <header className="z-30 w-full pl-4 md:px-8 py-4 bg-white sm:px-4">
-      <div className="container flex items-center justify-between mx-auto">
-        <div className="px-12">
-          <ul className="relative hidden space-x-10 uppercase tracking-widest md:inline-flex rtl:space-x-reverse">
-            <li>
-              <Link href="/">
-                <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-                  Home
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-                  About
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-                  Contact
-                </span>
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="flex items-center justify-between px-4">
         <Link href="/">
           <span className="flex items-center">
             <img
@@ -50,13 +25,39 @@ const Navbar = () => {
             <span className="sr-only">TechHub</span>
           </span>
         </Link>
-        <div className="flex items-center space-x-5 rtl:space-x-reverse">
+        <div className="hidden ml-[10%] md:flex uppercase tracking-widest gap-7 justify-between">
+          <Link href="/">
+            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+              Home
+            </span>
+          </Link>
+          <Link href="/about">
+            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+              About
+            </span>
+          </Link>
+          <Link href="/contact">
+            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+              Contact
+            </span>
+          </Link>
+        </div>
+
+        <div className="flex items-center px-4">
           <div className="hidden md:flex">
             <div className="flex flex-row gap-3 place-items-center mr-4">
-              <IoLogoFacebook className="text-xl hover:text-brand-500" />
-              <IoLogoInstagram className="text-xl hover:text-brand-500" />
-              <IoLogoLinkedin className="text-xl hover:text-brand-500" />
-              <IoLogoGithub className="text-xl hover:text-brand-500" />
+              <Link href="https://www.facebook.com/official.techhub.community">
+                <IoLogoFacebook className="text-xl hover:text-brand-500" />
+              </Link>
+              <Link href="https://www.instagram.com/techhub_community/">
+                <IoLogoInstagram className="text-xl hover:text-brand-500" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/techhub-community">
+                <IoLogoLinkedin className="text-xl hover:text-brand-500" />
+              </Link>
+              <Link href="https://github.com/techhub-community/">
+                <IoLogoGithub className="text-xl hover:text-brand-500" />
+              </Link>
             </div>
             <Link href="https://kutt.it/techhub-invite">
               <img
