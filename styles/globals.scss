@@ -80,6 +80,10 @@ a {
   @apply bg-gradient-to-r from-brand-500 to-brand-700 hover:from-brand-700 hover:to-brand-500;
 }
 
+.btn-border-grad {
+  @apply border-2 rounded border-brand-500 bg-gradient-to-r hover:text-white hover:from-brand-700 hover:to-brand-500;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
