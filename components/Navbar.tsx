@@ -25,7 +25,7 @@ const Navbar = () => {
             <span className="sr-only">TechHub</span>
           </span>
         </Link>
-        <div className="hidden ml-[10%] md:flex uppercase tracking-widest gap-7 justify-between">
+        <div className="hidden ml-[10%] md:flex uppercase tracking-widest gap-7 justify-between cursor-pointer">
           <Link href="/">
             <span className="text-black-600 hover:text-brand-700 hover:text-bold">
               Home
