@@ -8,11 +8,7 @@ export default function BasicQuestions() {
         <div className="px-4 md:px-10 py-4 md:py-7">
           <div className="sm:flex items-center justify-between">
             <div className="flex text-xl lg:text-2xl font-bold leading-normal text-gray-800">
-              <img
-                className="h-12"
-                src="https://cdn.svgporn.com/logos/dialogflow.svg"
-                alt=""
-              />
+              <img className="h-12" src="assets/svg/basic.svg" alt="" />
               <p className="ml-4 py-3 self-center">TechHub Basic Questions</p>
             </div>
           </div>

@@ -18,15 +18,9 @@ export default function QOD() {
         <div className="sm:mx-6 grid md:grid-cols-2 xl:grid-cols-3 gap-10">
           {/* Card Start */}
           <div className="h-auto w-full">
-            <div className="relative bg-white rounded-md shadow-lg p-8">
-              <div className="absolute right-0 top-0 -mt-5 mr-4">
-                <img className="h-12" src="assets/svg/question.svg" />
-              </div>
+            <div className="bg-white rounded-md shadow-lg p-8">
               <div className="flex items-center">
-                <img
-                  className="h-12"
-                  src="https://cdn.svgporn.com/logos/insomnia.svg"
-                />
+                <img className="h-12" src="assets/svg/basic.svg" />
                 <h2 className="text-base f-m-m ml-4 font-semibold">
                   TechHub - Basic
                 </h2>
@@ -52,15 +46,9 @@ export default function QOD() {
           {/* Card End */}
           {/* Card Start */}
           <div className="h-auto w-full">
-            <div className="relative bg-white rounded-md shadow-lg p-8">
-              <div className="absolute right-0 top-0 -mt-5 mr-4">
-                <img className="h-12" src="assets/svg/question.svg" />
-              </div>
+            <div className="bg-white rounded-md shadow-lg p-8">
               <div className="flex items-center">
-                <img
-                  className="h-12"
-                  src="https://cdn.svgporn.com/logos/dialogflow.svg"
-                />
+                <img className="h-12" src="assets/svg/alpha.svg" />
                 <h2 className="text-base f-m-m ml-4 font-semibold">
                   TechHub - Alpha
                 </h2>
@@ -86,15 +74,9 @@ export default function QOD() {
           {/* Card End */}
           {/* Card Start */}
           <div className="h-auto w-full">
-            <div className="relative bg-white rounded-md shadow-lg p-8">
-              <div className="absolute right-0 top-0 -mt-5 mr-4">
-                <img className="h-12" src="assets/svg/question.svg" />
-              </div>
+            <div className="bg-white rounded-md shadow-lg p-8">
               <div className="flex items-center">
-                <img
-                  className="h-12"
-                  src="https://cdn.svgporn.com/logos/codesandbox.svg"
-                />
+                <img className="h-12" src="assets/svg/beta.svg" />
                 <h2 className="text-base f-m-m ml-4 font-semibold">
                   TechHub - Beta
                 </h2>
