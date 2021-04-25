@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function QOD() {
@@ -40,9 +41,11 @@ export default function QOD() {
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
-                <button className="w-max btn btn-border-grad text-brand-700">
-                  More
-                </button>
+                <Link href="/questions#basic-questions">
+                  <button className="w-max btn btn-border-grad text-brand-700">
+                    More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -72,9 +75,11 @@ export default function QOD() {
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
-                <button className="w-max btn btn-border-grad text-brand-700">
-                  More
-                </button>
+                <Link href="/questions#alpha-questions">
+                  <button className="w-max btn btn-border-grad text-brand-700">
+                    More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -104,9 +109,11 @@ export default function QOD() {
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
-                <button className="w-max btn btn-border-grad text-brand-700">
-                  More
-                </button>
+                <Link href="questions/#beta-questions">
+                  <button className="w-max btn btn-border-grad text-brand-700">
+                    More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
