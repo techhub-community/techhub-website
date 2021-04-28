@@ -56,3 +56,5 @@ https://github.com/techhub-community/techhub-website/tree/dev) branch.
 
 - [Learn Tailwind CSS](https://tailwindcss.com/docs) - Tailwind CSS docs.
 
+- [Learn Yarn](https://classic.yarnpkg.com/en/docs/) - Yarn docs.
+- 
