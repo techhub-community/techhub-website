@@ -9,10 +9,14 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.2.0",
+    "@react-firebase/database": "^0.3.11",
+    "firebase": "^8.4.2",
     "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-spinners": "^0.10.6"
   },
   "devDependencies": {
     "@types/node": "^14.14.41",
