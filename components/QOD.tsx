@@ -1,8 +1,25 @@
 import Link from 'next/link';
 import React from 'react';
+import firebase from "firebase";
+import firebaseConfig from "../configs/firebaseConfigs";
 
-export default function QOD() {
-  return (
+interface QuestionOfTheDayProps{
+  alpha: any;
+  beta: any;
+  basics: any;
+}
+interface QuestionOfTheDayState {
+}
+
+
+export default class QOD extends React.Component <QuestionOfTheDayProps, QuestionOfTheDayState>{
+  
+  constructor(props){
+    super(props);
+  }
+    
+    render(){
+    return (
     <>
       <div className="relative px-4 md:px-12 lg:px-24 pt-36 pb-24">
         <div className="flex flex-col items-center justify-center w-full  mb-12">
@@ -26,15 +43,15 @@ export default function QOD() {
                 </h2>
               </div>
               <p className="text-base f-m-m mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                tempora earum voluptates, non pariatur, voluptatem ducimus est
-                reiciendis consequuntur enim explicabo amet omnis vero.
-                Reprehenderit atque doloribus quo ea consequuntur!
+                
+              {this.props.basics ? this.props.basics.questionTitle  : "Could not fetch"}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
+                <Link href={this.props.basics.questionUrl }>
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
+                </Link>
                 <Link href="/questions#basic-questions">
                   <button className="w-max btn btn-border-grad text-brand-700">
                     More
@@ -54,15 +71,15 @@ export default function QOD() {
                 </h2>
               </div>
               <p className="text-base f-m-m mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                tempora earum voluptates, non pariatur, voluptatem ducimus est
-                reiciendis consequuntur enim explicabo amet omnis vero.
-                Reprehenderit atque doloribus quo ea consequuntur!
+                {this.props.alpha ? this.props.alpha.questionTitle  : "Loading..."}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
+              <Link href={this.props.alpha.questionUrl }>
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
+
+                </Link>
                 <Link href="/questions#alpha-questions">
                   <button className="w-max btn btn-border-grad text-brand-700">
                     More
@@ -82,15 +99,15 @@ export default function QOD() {
                 </h2>
               </div>
               <p className="text-base f-m-m mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                tempora earum voluptates, non pariatur, voluptatem ducimus est
-                reiciendis consequuntur enim explicabo amet omnis vero.
-                Reprehenderit atque doloribus quo ea consequuntur!
+              {this.props.beta ? this.props.beta.questionTitle  : "Loading..."}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
+                
+              <Link href={this.props.beta.questionUrl }>
+                
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
-                </button>
+                </button></Link>
                 <Link href="questions/#beta-questions">
                   <button className="w-max btn btn-border-grad text-brand-700">
                     More
@@ -104,4 +121,4 @@ export default function QOD() {
       </div>
     </>
   );
-}
+}}
