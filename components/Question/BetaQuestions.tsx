@@ -9,7 +9,7 @@ interface BetaQuestionsState {
   lastTenDays: any;
 }
 
-export default class BetaQuestions extends React.Component<{}, BetaQuestonsState> {
+export default class BetaQuestions extends React.Component<{}, BetaQuestionsState> {
 
   constructor(props){
     super(props);

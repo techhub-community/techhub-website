@@ -10,7 +10,7 @@ interface BasicsQuestionsState {
   lastTenDays: any;
 }
 
-export default class BasicQuestions extends React.Component <{}, BasicQuestionsState>{
+export default class BasicQuestions extends React.Component <{}, BasicsQuestionsState>{
 
   constructor(props){
     super(props);
