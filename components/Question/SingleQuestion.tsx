@@ -1,6 +1,19 @@
+import Link from 'next/link';
 import React from 'react';
 
-export default function SingleQuestion() {
+
+interface SingleQuestionProps{
+
+  date: string;
+  details:any;
+}
+export default class SingleQuestion extends React.Component <SingleQuestionProps,{}>{
+
+  constructor(props){
+    super(props);
+  }
+  
+  render(){
   return (
     <>
       {/* Single Row Start */}
@@ -13,24 +26,28 @@ export default function SingleQuestion() {
           />
           <div>
             <p className="text-lg font-medium leading-none text-black-700">
-              Question Title
+
+            {this.props.details ? this.props.details.questionTitle : "Could not fetch question data"}           
             </p>
             <p className="line-clamp-3 md:line-clamp-1 text-sm text-gray-600 mt-2 ">
-              Lorem ipsum do/lor sit amet consectetur, adipisicing elit. Totam
-              aperiam esse dignissimos voluptatibus fugiat enim! Eos optio rerum
-              nostrum quo, molestiae sed repellendus iusto est? Dolore similique
-              eveniet nihil. Delectus!
+            {this.props.details ? this.props.details.questionDesc : "Could not fetch question data"}           
             </p>
           </div>
         </div>
         <div className="text-left">
-          <p className="text-lg">16/04/2021</p>
+          <p className="text-lg">{this.props.date}</p>
         </div>
         <div>
+
+          <Link href={this.props.details ? this.props.details.questionUrl : ""}>
           <p className="btn btn-grad text-white w-max">Solve Now</p>
+        
+          </Link>
         </div>
       </div>
       {/* Single Row Ends */}
     </>
   );
+}
+
 }
