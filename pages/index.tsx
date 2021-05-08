@@ -48,38 +48,42 @@ export default class Home extends React.Component <{} , HomeState> {
   }
   componentDidMount = async () => {
     var currentDate=getCurrentDate();
+    
+    
+    //Get Alpha Question of the day
     this.state.database.ref("alpha").get().then(snapshot => {
-      snapshot.forEach(snap => {
-        if(snap.val().questionDate==currentDate){
-          console.log(snap.val())
-          this.setState({
-            alpha: snap.val()
-          })
-        }
+      var alphaDto=snapshot.val().filter(function(item){
+        return item.questionDate===currentDate;
+      })
+      this.setState({   
+        alpha: alphaDto[0]
       })
     });
 
+    
+    //Get beta question of the day
     this.state.database.ref("beta").get().then(snapshot => {
-      snapshot.forEach(snap => {
-        if(snap.val().questionDate==currentDate){
-          console.log(snap.val())
-          this.setState({
-            beta: snap.val()
-          })
-        }
+      var betaDto=snapshot.val().filter(function(item){
+        return item.questionDate===currentDate;
+      })
+      this.setState({   
+        beta: betaDto[0]
       })
     });
 
 
+    
+    
+    
+    
+    
+    //Get basics question of the day
     this.state.database.ref("basics").get().then( snapshot => {
-      snapshot.forEach(snap => {
-        if(snap.val().questionDate==currentDate){
-          console.log(snap.val())
-          this.setState({
-            
-            basics: snap.val()
-          })
-        }
+      var basicsDto=snapshot.val().filter(function(item){
+        return item.questionDate===currentDate;
+      })
+      this.setState({
+        basics: basicsDto[0]
       })
     });
   }
