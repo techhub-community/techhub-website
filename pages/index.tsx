@@ -12,20 +12,13 @@ import firebase from "firebase";
 import firebaseConfig from "../configs/firebaseConfigs";
 
 import HashLoader from "react-spinners/HashLoader";
+import getCurrentDate from "../common/helpers"
 interface HomeState {
   database: any;
   data: any;
   alpha: any;
   beta: any;
   basics: any;
-}
-
-function getCurrentDate(){
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = today.getFullYear();
-  return dd + '/' + mm + '/' + yyyy;
 }
 export default class Home extends React.Component <{} , HomeState> {
   

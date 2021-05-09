@@ -1,8 +1,50 @@
 import React from 'react';
 import SingleQuestion from './SingleQuestion';
+import firebase from "firebase";
+import firebaseConfig from "../../configs/firebaseConfigs";
+import {get10Days} from "../../common/helpers";
 
-export default function AlphaQuestions() {
-  return (
+interface AlphaQuestionsState {
+  database: any;
+  alpha: any;
+  lastTenDays: any;
+}
+
+export default class AlphaQuestions extends React.Component<{},AlphaQuestionsState> {
+  constructor(props){
+    super(props);
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    else {
+      firebase.app(); // if already initialized, use that one
+    }
+
+    this.state={
+      database: firebase.database(),
+      alpha: [], lastTenDays: get10Days()
+    }
+  }
+   componentDidMount = async () => {
+    var lastTenDays=get10Days();
+    let data=[]
+    this.state.database.ref("alpha").get().then(snapshot => {
+      var lastTenQuestions=snapshot.val().filter(
+
+        function(item){
+          return lastTenDays.includes(item.questionDate)
+        }
+      )
+      this.setState({
+        alpha: lastTenQuestions.reverse()
+      
+      })
+    });
+  }
+  
+  render()
+  {
+    return (
     <>
       <div className="w-full px-2 md:px-12 my-4" id="alpha-questions">
         <div className="px-4 md:px-10 py-4 md:py-7">
@@ -14,18 +56,10 @@ export default function AlphaQuestions() {
           </div>
         </div>
         <div className="px-6 md:px-16 flex flex-col gap-8">
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
-          <SingleQuestion />
+          {this.state.alpha.map(item => (
+          <SingleQuestion date={item.questionDate} details={item}/>))}
         </div>
       </div>
     </>
   );
-}
+}}
