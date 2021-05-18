@@ -46,7 +46,7 @@ export default class Home extends React.Component <{} , HomeState> {
     
     
     //Get Alpha Question of the day
-    this.state.database.ref("alpha").get().then(snapshot => {
+    await this.state.database.ref("alpha").get().then(snapshot => {
       var alphaDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
@@ -57,7 +57,7 @@ export default class Home extends React.Component <{} , HomeState> {
 
     
     //Get beta question of the day
-    this.state.database.ref("beta").get().then(snapshot => {
+    await this.state.database.ref("beta").get().then(snapshot => {
       var betaDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
@@ -73,7 +73,7 @@ export default class Home extends React.Component <{} , HomeState> {
     
     
     //Get basics question of the day
-    this.state.database.ref("basics").get().then( snapshot => {
+    await this.state.database.ref("basics").get().then( snapshot => {
       var basicsDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
