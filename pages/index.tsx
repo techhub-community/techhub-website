@@ -19,6 +19,7 @@ interface HomeState {
   alpha: any;
   beta: any;
   basics: any;
+  loading: boolean;
 }
 export default class Home extends React.Component <{} , HomeState> {
   
@@ -36,7 +37,8 @@ export default class Home extends React.Component <{} , HomeState> {
      database: firebase.database(),
      data:"",
      alpha: null, beta: null,
-     basics: null
+     basics: null,
+     loading: true
    }
   }
   componentDidMount = async () => {
@@ -79,11 +81,20 @@ export default class Home extends React.Component <{} , HomeState> {
         basics: basicsDto[0]
       })
     });
+  
+  
+  
+  
+  
+  
+    this.setState({
+      loading: false
+    })
   }
   render(){
     return (
     <>
-    {this.state.alpha && this.state.beta && this.state.basics ? 
+    {!this.state.loading ? 
       <div>
         <Head>
           <title>Home - TechHub :: Community</title>
