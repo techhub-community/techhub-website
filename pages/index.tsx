@@ -111,9 +111,9 @@ export default class Home extends React.Component <{} , HomeState> {
       <div style={{ position: "fixed",
         top: "50%",
         left: "50%",
-        marginLeft: "-50px",
-        marginTop: "-50px"
-      }}>
+        width:   "100%",
+        margin:    "0 auto",
+        display: "table"}}>
         <HashLoader
         loading={true}
         color="#6a0a37"
