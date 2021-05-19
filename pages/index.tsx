@@ -7,13 +7,12 @@ import QOD from '@/components/QOD';
 import Team from '@/components/Team';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
-import Services from '@/components/Services';
+import LLT from '@/components/LLT';
 import firebase from 'firebase';
 import firebaseConfig from '../configs/firebaseConfigs';
 
 import HashLoader from 'react-spinners/HashLoader';
 import getCurrentDate from '../common/helpers';
-import LLT from '@/components/LLT';
 interface HomeState {
   database: any;
   data: any;
