@@ -44,10 +44,10 @@ export default class QOD extends React.Component <QuestionOfTheDayProps, Questio
               </div>
               <p className="text-base f-m-m mt-3">
                 
-              {this.props.basics ? this.props.basics.questionTitle  : "Could not fetch"}
+              {this.props.basics ? this.props.basics.questionTitle  : "Could not fetch the question"}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
-                <Link href={this.props.basics.questionUrl }>
+                <Link href={this.props.basics ? this.props.basics.questionUrl : ""}>
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
@@ -71,10 +71,10 @@ export default class QOD extends React.Component <QuestionOfTheDayProps, Questio
                 </h2>
               </div>
               <p className="text-base f-m-m mt-3">
-                {this.props.alpha ? this.props.alpha.questionTitle  : "Loading..."}
+                {this.props.alpha ? this.props.alpha.questionTitle  : "Could not fetch the question"}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
-              <Link href={this.props.alpha.questionUrl }>
+              <Link href={this.props.alpha ? this.props.alpha.questionUrl : ""}>
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve
                 </button>
@@ -99,11 +99,11 @@ export default class QOD extends React.Component <QuestionOfTheDayProps, Questio
                 </h2>
               </div>
               <p className="text-base f-m-m mt-3">
-              {this.props.beta ? this.props.beta.questionTitle  : "Loading..."}
+              {this.props.beta ? this.props.beta.questionTitle  : "Could not fetch the question"}
               </p>
               <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
                 
-              <Link href={this.props.beta.questionUrl }>
+              <Link href={this.props.beta   ?   this.props.beta.questionUrl : ""}>
                 
                 <button className="w-max btn btn-border-grad text-brand-700">
                   Solve

@@ -19,6 +19,7 @@ interface HomeState {
   alpha: any;
   beta: any;
   basics: any;
+  loading: boolean;
 }
 export default class Home extends React.Component <{} , HomeState> {
   
@@ -36,7 +37,8 @@ export default class Home extends React.Component <{} , HomeState> {
      database: firebase.database(),
      data:"",
      alpha: null, beta: null,
-     basics: null
+     basics: null,
+     loading: true
    }
   }
   componentDidMount = async () => {
@@ -44,7 +46,7 @@ export default class Home extends React.Component <{} , HomeState> {
     
     
     //Get Alpha Question of the day
-    this.state.database.ref("alpha").get().then(snapshot => {
+    await this.state.database.ref("alpha").get().then(snapshot => {
       var alphaDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
@@ -55,7 +57,7 @@ export default class Home extends React.Component <{} , HomeState> {
 
     
     //Get beta question of the day
-    this.state.database.ref("beta").get().then(snapshot => {
+    await this.state.database.ref("beta").get().then(snapshot => {
       var betaDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
@@ -71,7 +73,7 @@ export default class Home extends React.Component <{} , HomeState> {
     
     
     //Get basics question of the day
-    this.state.database.ref("basics").get().then( snapshot => {
+    await this.state.database.ref("basics").get().then( snapshot => {
       var basicsDto=snapshot.val().filter(function(item){
         return item.questionDate===currentDate;
       })
@@ -79,11 +81,20 @@ export default class Home extends React.Component <{} , HomeState> {
         basics: basicsDto[0]
       })
     });
+  
+  
+  
+  
+  
+  
+    this.setState({
+      loading: false
+    })
   }
   render(){
     return (
     <>
-    {this.state.alpha && this.state.beta && this.state.basics ? 
+    {!this.state.loading ? 
       <div>
         <Head>
           <title>Home - TechHub :: Community</title>
@@ -100,9 +111,9 @@ export default class Home extends React.Component <{} , HomeState> {
       <div style={{ position: "fixed",
         top: "50%",
         left: "50%",
-        marginLeft: "-50px",
-        marginTop: "-50px"
-      }}>
+        width:   "100%",
+        margin:    "0 auto",
+        display: "table"}}>
         <HashLoader
         loading={true}
         color="#6a0a37"
