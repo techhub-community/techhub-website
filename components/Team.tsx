@@ -19,7 +19,7 @@ export default function Team() {
                 img="https://picsum.photos/350"
                 designation="Full Stack Developer"
                 github="github-link"
-                web="web-link"
+                web="https://adikeshri.ml"
               />
               <TeamMate
                 name="Avinash"
