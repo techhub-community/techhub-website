@@ -12,7 +12,7 @@ import firebase from 'firebase';
 import firebaseConfig from '../configs/firebaseConfigs';
 
 import HashLoader from 'react-spinners/HashLoader';
-import getCurrentDate from '../common/helpers';
+import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
 interface HomeState {
   database: any;
   data: any;
@@ -41,7 +41,13 @@ export default class Home extends React.Component<{}, HomeState> {
     };
   }
   componentDidMount = async () => {
-    var currentDate = getCurrentDate();
+    var currentDate;
+    if(isPastQODTime()){
+      currentDate=getNextDate();
+    }
+    else{
+      currentDate = getCurrentDate();
+    }
 
     //Get Alpha Question of the day
     await this.state.database
