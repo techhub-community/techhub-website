@@ -21,3 +21,22 @@ export function get10Days(){
   }
   return dates;
 }
+export function isPastQODTime(){
+  var today = new Date();
+  if(today.getHours() >= 22){
+    if(today.getHours()=== 22 && today.getMinutes() < 30)
+      return false;
+    return true;
+  }
+  return false;
+}
+
+export  function getNextDate(){
+  var today = new Date();
+  var tomorrow=new Date(today);
+  tomorrow.setDate(today.getDate() + 1)
+  var dd = String(tomorrow.getDate()).padStart(2, '0');
+  var mm = String(tomorrow.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = tomorrow.getFullYear();
+  return dd + '/' + mm + '/' + yyyy;
+}
