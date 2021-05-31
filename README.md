@@ -59,6 +59,9 @@ https://github.com/techhub-community/techhub-website/tree/dev) branch.
 
 - [Learn NextJS ](https://nextjs.org/docs/getting-started) - Next.js docs.
 
+- [Learn Yarn](https://classic.yarnpkg.com/en/docs/) - Yarn docs.
+
+- [Learn Node](https://nodejs.org/en/docs/) - Node docs.
 
 - [Learn Tailwind CSS](https://tailwindcss.com/docs) - Tailwind CSS docs.
 
