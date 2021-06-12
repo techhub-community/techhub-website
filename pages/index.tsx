@@ -14,7 +14,6 @@ import HashLoader from 'react-spinners/HashLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
 
 import getTechhubStats from '../apis/github';
-import getDiscordStats from 'apis/discord';
 interface HomeState {
   githubStats: any;
   database: any;
@@ -93,9 +92,7 @@ export default class Home extends React.Component<{}, HomeState> {
 
     var gitStats = await getTechhubStats();
 
-    var discStats = await getDiscordStats();
-
-    if (gitStats !== 'Error' && discStats !== 'Error') {
+    if (gitStats !== 'Error') {
       this.setState({
         githubStats: gitStats,
       });
@@ -144,3 +141,5 @@ export default class Home extends React.Component<{}, HomeState> {
     );
   }
 }
+
+
