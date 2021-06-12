@@ -17,8 +17,6 @@ import getTechhubStats from '../apis/github';
 import getDiscordStats from 'apis/discord';
 interface HomeState {
   githubStats: any;
-  discordStats: any;
-
   database: any;
   data: any;
   alpha: any;
@@ -44,7 +42,6 @@ export default class Home extends React.Component<{}, HomeState> {
       basics: null,
       loading: true,
       githubStats: null,
-      discordStats: null,
     };
   }
   componentDidMount = async () => {
@@ -96,17 +93,14 @@ export default class Home extends React.Component<{}, HomeState> {
 
     var gitStats = await getTechhubStats();
 
-    
-    var discStats=await getDiscordStats();
-    
-    if (gitStats !== 'Error' && discStats !== "Error") {
+    var discStats = await getDiscordStats();
+
+    if (gitStats !== 'Error' && discStats !== 'Error') {
       this.setState({
         githubStats: gitStats,
-      
-      
-      discordStats: discStats});
+      });
     }
-    
+
     this.setState({
       loading: false,
     });
@@ -126,7 +120,7 @@ export default class Home extends React.Component<{}, HomeState> {
               beta={this.state.beta}
               basics={this.state.basics}
             />
-            <Stats githubStats={this.state.githubStats} discordStats={this.state.discordStats}/>
+            <Stats githubStats={this.state.githubStats} />
             <LLT />
             <CTA />
             <Team />
@@ -150,24 +144,3 @@ export default class Home extends React.Component<{}, HomeState> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
