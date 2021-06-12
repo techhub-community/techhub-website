@@ -1,6 +1,5 @@
 import React from 'react';
 import TeamMate from '@/components/Team/TeamMate';
-
 export default function Team() {
   return (
     <section className="bg-gray-50">
@@ -15,12 +14,13 @@ export default function Team() {
           <div className="w-10/12">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               <TeamMate
-                name="Aditya"
+                name="Aditya Keshri"
                 img="https://picsum.photos/350"
-                designation="Full Stack Developer"
-                github="github-link"
+                designation="Engineer | Problem Solver | Data geek"
+                github="https://github.com/adikeshri"
                 web="https://adikeshri.ml"
-              />
+                lin="https://linkedin.com/in/adikeshri"
+                twitter="https://twitter.com/adi_keshri"/>
               <TeamMate
                 name="Avinash"
                 img="https://picsum.photos/250"
@@ -60,3 +60,6 @@ export default function Team() {
     </section>
   );
 }
+
+
+
