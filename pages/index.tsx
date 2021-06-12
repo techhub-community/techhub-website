@@ -10,10 +10,15 @@ import CTA from '@/components/CTA';
 import LLT from '@/components/LLT';
 import firebase from 'firebase';
 import firebaseConfig from '../configs/firebaseConfigs';
-
 import HashLoader from 'react-spinners/HashLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
+
+import getTechhubStats from '../apis/github';
+import getDiscordStats from 'apis/discord';
 interface HomeState {
+  githubStats: any;
+  discordStats: any;
+
   database: any;
   data: any;
   alpha: any;
@@ -38,14 +43,15 @@ export default class Home extends React.Component<{}, HomeState> {
       beta: null,
       basics: null,
       loading: true,
+      githubStats: null,
+      discordStats: null,
     };
   }
   componentDidMount = async () => {
     var currentDate;
-    if(isPastQODTime()){
-      currentDate=getNextDate();
-    }
-    else{
+    if (isPastQODTime()) {
+      currentDate = getNextDate();
+    } else {
       currentDate = getCurrentDate();
     }
 
@@ -88,6 +94,19 @@ export default class Home extends React.Component<{}, HomeState> {
         });
       });
 
+    var gitStats = await getTechhubStats();
+
+    
+    var discStats=await getDiscordStats();
+    
+    if (gitStats !== 'Error' && discStats !== "Error") {
+      this.setState({
+        githubStats: gitStats,
+      
+      
+      discordStats: discStats});
+    }
+    
     this.setState({
       loading: false,
     });
@@ -107,7 +126,7 @@ export default class Home extends React.Component<{}, HomeState> {
               beta={this.state.beta}
               basics={this.state.basics}
             />
-            <Stats />
+            <Stats githubStats={this.state.githubStats} discordStats={this.state.discordStats}/>
             <LLT />
             <CTA />
             <Team />
@@ -131,3 +150,24 @@ export default class Home extends React.Component<{}, HomeState> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

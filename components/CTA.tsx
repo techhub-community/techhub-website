@@ -14,9 +14,7 @@ export default function CTA() {
           Join US
         </h1>
         <p className="text-xl text-center text-gray-400 xl:w-4/6 w-5/6 mx-auto pt-5 pb-8 font-normal">
-          As copper costs soar, we are taking aggressive steps in pricing and
-          product development to ensure our continued commitment to
-          cost-effectively providing the world's highest quality.
+        "If you want to lift yourself up, lift up someone else." – Booker T. Washington
         </p>
         <div className="flex justify-center items-center py-6">
           <div className="flex flex-row gap-6 place-items-center mr-4">
