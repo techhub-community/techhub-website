@@ -13,10 +13,6 @@ export default function Stats(props) {
   function getProjects() {
     return props.githubStats.length;
   }
-
-  function getMembers() {
-    return props.discordStats.members.length;
-  }
   return (
     <div className="bg-black-800 mx-auto py-16">
       <div className="relative xl:px-20 lg:px-20 md:px-12 pt-10">
@@ -64,3 +60,7 @@ export default function Stats(props) {
     </div>
   );
 }
+
+
+
+
