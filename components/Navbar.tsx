@@ -41,7 +41,12 @@ const Navbar = () => {
               Contact
             </span>
           </Link>
-        </div>
+        
+          <Link href="/contributors">
+            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+            Contributors
+            </span>
+          </Link></div>
 
         <div className="flex items-center px-4">
           <div className="hidden md:flex">
@@ -119,7 +124,12 @@ const Navbar = () => {
                     Contact
                   </li>
                 </Link>
-                <Link href="https://kutt.it/techhub-invite">
+                <Link href="/contributors">
+                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                  
+                  Contributors
+                  </li>
+                </Link><Link href="https://kutt.it/techhub-invite">
                   <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                     Join Discord
                   </li>
@@ -134,3 +144,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
