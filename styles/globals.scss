@@ -1,0 +1,93 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #d24984;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.hover-card {
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -25px;
+    right: -25px;
+    background: #d24984;
+    height: 60px;
+    width: 60px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(35);
+  }
+}
+
+.hover-card:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h1 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+
+.btn {
+  @apply px-6 py-2 rounded;
+}
+
+.btn-grad {
+  @apply bg-gradient-to-r from-brand-500 to-brand-700 hover:from-brand-700 hover:to-brand-500;
+}
+
+.btn-border-grad {
+  @apply border-2 rounded border-brand-500 bg-gradient-to-r hover:text-white hover:from-brand-700 hover:to-brand-500;
+}
+
+.zoom{
+  @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
