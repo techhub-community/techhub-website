@@ -23,7 +23,7 @@ export default function CTA() {
             <a>
               <img
                 alt="Discord"
-                className="h-8"
+                className="h-8 zoom"
                 src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
               />
             </a>

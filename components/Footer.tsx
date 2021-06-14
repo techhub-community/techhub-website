@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="border-t-2 border-gray-50 text-black-700 pt-8 pb-4 flex items-center justify-around">
+    <div className="border-t-2 border-gray-50 text-black-700 pt-8 pb-4 flex flex-col md:flex-row items-center justify-around">
       <div className="w-44">
         <img loading="lazy" src="/assets/logo/logo-full-transparent.png" />
       </div>
@@ -18,6 +18,13 @@ export default function Footer() {
             <a>
               <li className="lg:text-lg text-sm leading-5 lg:mr-10 mr-2 flex flex-col items-end justify-end font-normal cursor-pointer hover:text-brand-600">
                 Home
+              </li>
+            </a>
+          </Link>
+          <Link href="/contributors">
+            <a>
+              <li className="lg:text-lg text-sm leading-5 lg:mr-10 mr-2 flex flex-col items-end justify-end font-normal cursor-pointer hover:text-brand-600">
+                Contributors
               </li>
             </a>
           </Link>

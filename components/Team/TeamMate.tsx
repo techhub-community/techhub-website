@@ -12,7 +12,11 @@ export default function TeamMate(props) {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center">
-        <img className="rounded-full h-36 w-36" src={props.img} alt="team 1" />
+        <img
+          className="rounded-full h-36 w-36 zoom"
+          src={props.img}
+          alt="team 1"
+        />
         <h2 className="text-xl font-medium mt-6">{props.name}</h2>
         <h3 className="text-md">{props.designation}</h3>
         <div className="w-full flex justify-center pt-5 pb-5">

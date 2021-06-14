@@ -27,25 +27,14 @@ const Navbar = () => {
         </Link>
         <div className="hidden ml-[10%] md:flex uppercase tracking-widest gap-7 justify-between cursor-pointer">
           <Link href="/">
-            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
               Home
-            </span>
+            </a>
           </Link>
-          {/* <Link href="/about">
-            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-              About
-            </span>
-          </Link>
-          <Link href="/contact">
-            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-              Contact
-            </span>
-          </Link> */}
-
           <Link href="/contributors">
-            <span className="text-black-600 hover:text-brand-700 hover:text-bold">
+            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contributors
-            </span>
+            </a>
           </Link>
         </div>
 
@@ -77,6 +66,7 @@ const Navbar = () => {
               <a>
                 <img
                   alt="Discord"
+                  className="zoom"
                   src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
                 />
               </a>
@@ -127,16 +117,6 @@ const Navbar = () => {
                     </li>
                   </a>
                 </Link>
-                {/* <Link href="/about">
-                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                    About
-                  </li>
-                </Link>
-                <Link href="/contact">
-                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                    Contact
-                  </li>
-                </Link> */}
                 <Link href="/contributors">
                   <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
