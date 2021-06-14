@@ -10,7 +10,7 @@ import CTA from '@/components/CTA';
 import LLT from '@/components/LLT';
 import firebase from 'firebase';
 import firebaseConfig from '../configs/firebaseConfigs';
-import HashLoader from 'react-spinners/HashLoader';
+import BarLoader from 'react-spinners/BarLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
 
 import getTechhubStats from '../apis/github';
@@ -124,22 +124,23 @@ export default class Home extends React.Component<{}, HomeState> {
             <Footer />
           </div>
         ) : (
-          <div
-            style={{
-              position: 'fixed',
-              top: '50%',
-              left: '50%',
-              width: '100%',
-              margin: '0 auto',
-              display: 'table',
-            }}
-          >
-            <HashLoader loading={true} color="#6a0a37" size={50} />
+          <div className="flex flex-col justify-center items-center place-items-center h-screen my-auto ">
+            <img
+              src="/assets/logo/logo-full-transparent.png"
+              className="h-16"
+              alt=""
+            />
+            <div className="my-3 flex">
+              <BarLoader
+                loading={true}
+                color="#6a0a37"
+                height={3}
+                width={100}
+              />
+            </div>
           </div>
         )}
       </>
     );
   }
 }
-
-

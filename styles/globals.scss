@@ -84,6 +84,10 @@ a {
   @apply border-2 rounded border-brand-500 bg-gradient-to-r hover:text-white hover:from-brand-700 hover:to-brand-500;
 }
 
+.zoom{
+  @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

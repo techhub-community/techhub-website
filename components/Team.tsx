@@ -8,50 +8,59 @@ export default function Team() {
           <h1 className="font-semibold text-gray-800 text-3xl md:text-4xl">
             Meet The Team
           </h1>
-          <hr className="w-36 h-1 bg-brand-700 rounded-full" />
         </div>
         <div className="flex items-center justify-center w-full">
           <div className="w-10/12">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               <TeamMate
                 name="Aditya Keshri"
-                img="https://picsum.photos/350"
-                designation="Engineer | Problem Solver | Data geek"
+                img="assets/avatars/avatar.svg"
+                designation="Engineer | Problem Solver | Data Geek"
                 github="https://github.com/adikeshri"
                 web="https://adikeshri.ml"
                 lin="https://linkedin.com/in/adikeshri"
-                twitter="https://twitter.com/adi_keshri"/>
+                twitter="https://twitter.com/adi_keshri"
+              />
               <TeamMate
-                name="Avinash"
-                img="https://picsum.photos/250"
-                designation="Full Stack Developer"
-                fb="https://facebook.com/dntandan"
-                insta="https://instagram.com/deepnarayantandan"
-                web="web-link"
+                name="Avinash Kumar"
+                img="assets/avatars/avatar-6.svg"
+                designation="Data Scientist"
+                lin="linkedin.com/in/iavinas only add my linkedin"
               />
               <TeamMate
                 name="Shekhar"
-                img="https://picsum.photos/300"
-                designation="Full Stack Developer"
+                img="assets/avatars/avatar-2.svg"
+                designation="Speaker | Full Stack Developer"
                 github="github-link"
                 web="web-link"
               />
               <TeamMate
                 name="Deep Narayan Tandan"
-                img="https://picsum.photos/200"
-                designation="Full Stack Developer"
+                img="assets/avatars/avatar-3.svg"
+                designation="Freelancer | Full Stack Developer"
                 web="https://dntandan.ml"
                 lin="https://linkedin.com/in/dntandan"
                 twitter="https://twitter.com/dntandan"
                 github="https://github.com/dntandan"
               />
+
+              <TeamMate
+                name="Siddhant Ranjan"
+                img="assets/avatars/avatar-4.svg"
+                designation="Kaggle Expert | Data Science"
+                github="https://github.com/sid26ranjan"
+              />
+              <TeamMate
+                name="Abhi Chaurasia"
+                img="assets/avatars/avatar-5.svg"
+                designation="Pythonista | Full Stack Developer | Audiophile"
+                github="https://github.com/abhi204"
+              />
               <TeamMate
                 name="Avikant"
-                img="https://picsum.photos/250"
-                designation="Full Stack Developer"
-                lin="github-link"
-                web="web-link"
-                fb="web-link"
+                img="assets/avatars/avatar-7.svg"
+                designation="Data Science | Full Stack Developer"
+                github="https://github.com/AvikantSrivastava"
               />
             </div>
           </div>
@@ -60,6 +69,3 @@ export default function Team() {
     </section>
   );
 }
-
-
-
