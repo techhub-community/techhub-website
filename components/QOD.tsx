@@ -22,19 +22,20 @@ export default class QOD extends React.Component<
     return (
       <>
         <div className="relative px-4 md:px-12 lg:px-24 pt-36 pb-24">
-          <div className="flex flex-col items-center justify-center w-full  mb-12">
-            <h1 className="font-semibold text-gray-800 text-3xl md:text-4xl">
+          <div className="flex flex-col items-center justify-center text-center w-full  mb-12">
+            <h1 className="font-semibold text-gray-800 text-3xl md:text-5xl">
               Question Of The Day
             </h1>
-            <p className="px-5 my-8 text-xl">
-              Solve these qusetions and share your answer in our discord. We
-              discuss these questions daily after 09:00 PM IST.
+            <p className="lg:w-[60%] px-5 my-8 text-lg lg:text-xl">
+              Solve these questions and share your answer in our discord server.
+              We discuss these questions daily after 09:00 PM IST in our discord
+              server.
             </p>
           </div>
           <div className="sm:mx-6 grid md:grid-cols-2 xl:grid-cols-3 gap-10">
             {/* Card Start */}
             <div className="h-auto w-full">
-              <div className="bg-white rounded-md shadow-lg p-8">
+              <div className="bg-white rounded-md shadow-sm hover:shadow-md zoom p-8">
                 <div className="flex items-center">
                   <img className="h-12" src="assets/svg/basic.svg" />
                   <h2 className="text-base f-m-m ml-4 font-semibold">
@@ -67,7 +68,7 @@ export default class QOD extends React.Component<
             {/* Card End */}
             {/* Card Start */}
             <div className="h-auto w-full">
-              <div className="bg-white rounded-md shadow-lg p-8">
+              <div className="bg-white rounded-md shadow-sm hover:shadow-md zoom p-8">
                 <div className="flex items-center">
                   <img className="h-12" src="assets/svg/alpha.svg" />
                   <h2 className="text-base f-m-m ml-4 font-semibold">
@@ -98,7 +99,7 @@ export default class QOD extends React.Component<
             {/* Card End */}
             {/* Card Start */}
             <div className="h-auto w-full">
-              <div className="bg-white rounded-md shadow-lg p-8">
+              <div className="bg-white rounded-md shadow-sm hover:shadow-md zoom p-8">
                 <div className="flex items-center">
                   <img className="h-12" src="assets/svg/beta.svg" />
                   <h2 className="text-base f-m-m ml-4 font-semibold">
