@@ -31,7 +31,7 @@ const Navbar = () => {
               Home
             </span>
           </Link>
-          <Link href="/about">
+          {/* <Link href="/about">
             <span className="text-black-600 hover:text-brand-700 hover:text-bold">
               About
             </span>
@@ -40,35 +40,46 @@ const Navbar = () => {
             <span className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contact
             </span>
-          </Link>
-        
+          </Link> */}
+
           <Link href="/contributors">
             <span className="text-black-600 hover:text-brand-700 hover:text-bold">
-            Contributors
+              Contributors
             </span>
-          </Link></div>
+          </Link>
+        </div>
 
         <div className="flex items-center px-4">
           <div className="hidden md:flex">
             <div className="flex flex-row gap-3 place-items-center mr-4">
               <Link href="https://www.facebook.com/official.techhub.community">
-                <IoLogoFacebook className="text-xl hover:text-brand-500" />
+                <a>
+                  <IoLogoFacebook className="text-xl hover:text-brand-500" />
+                </a>
               </Link>
               <Link href="https://www.instagram.com/techhub_community/">
-                <IoLogoInstagram className="text-xl hover:text-brand-500" />
+                <a>
+                  <IoLogoInstagram className="text-xl hover:text-brand-500" />
+                </a>
               </Link>
               <Link href="https://www.linkedin.com/company/techhub-community">
-                <IoLogoLinkedin className="text-xl hover:text-brand-500" />
+                <a>
+                  <IoLogoLinkedin className="text-xl hover:text-brand-500" />
+                </a>
               </Link>
               <Link href="https://github.com/techhub-community/">
-                <IoLogoGithub className="text-xl hover:text-brand-500" />
+                <a>
+                  <IoLogoGithub className="text-xl hover:text-brand-500" />
+                </a>
               </Link>
             </div>
             <Link href="https://kutt.it/techhub-invite">
-              <img
-                alt="Discord"
-                src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
-              />
+              <a>
+                <img
+                  alt="Discord"
+                  src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
+                />
+              </a>
             </Link>
           </div>
 
@@ -110,11 +121,13 @@ const Navbar = () => {
             >
               <ul className="py-2">
                 <Link href="/">
-                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                    Home
-                  </li>
+                  <a>
+                    <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                      Home
+                    </li>
+                  </a>
                 </Link>
-                <Link href="/about">
+                {/* <Link href="/about">
                   <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                     About
                   </li>
@@ -123,16 +136,20 @@ const Navbar = () => {
                   <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                     Contact
                   </li>
-                </Link>
+                </Link> */}
                 <Link href="/contributors">
-                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                  
-                  Contributors
-                  </li>
-                </Link><Link href="https://kutt.it/techhub-invite">
-                  <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
-                    Join Discord
-                  </li>
+                  <a>
+                    <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                      Contributors
+                    </li>
+                  </a>
+                </Link>
+                <Link href="https://kutt.it/techhub-invite">
+                  <a>
+                    <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                      Join Discord
+                    </li>
+                  </a>
                 </Link>
               </ul>
             </div>
@@ -144,7 +161,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-

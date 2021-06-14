@@ -60,7 +60,3 @@ export default function Stats(props) {
     </div>
   );
 }
-
-
-
-
