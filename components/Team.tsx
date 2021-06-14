@@ -15,16 +15,16 @@ export default function Team() {
               <TeamMate
                 name="Aditya Keshri"
                 img="assets/avatars/avatar.svg"
-                designation="Engineer | Problem Solver | Data geek"
+                designation="Engineer | Problem Solver | Data Geek"
                 github="https://github.com/adikeshri"
                 web="https://adikeshri.ml"
                 lin="https://linkedin.com/in/adikeshri"
                 twitter="https://twitter.com/adi_keshri"
               />
               <TeamMate
-                name="Avinash"
+                name="Avinash Kumar"
                 img="assets/avatars/avatar-6.svg"
-                designation="Data Science | Machine Learning "
+                designation="Data Scientist"
                 lin="linkedin.com/in/iavinas only add my linkedin"
               />
               <TeamMate
@@ -47,18 +47,18 @@ export default function Team() {
               <TeamMate
                 name="Siddhant Ranjan"
                 img="assets/avatars/avatar-4.svg"
-                designation="Kaggle Exper | Data Science"
+                designation="Kaggle Expert | Data Science"
                 github="https://github.com/sid26ranjan"
               />
               <TeamMate
                 name="Abhi Chaurasia"
-                img="assets/avatars/avatar.svg"
+                img="assets/avatars/avatar-5.svg"
                 designation="Pythonista | Full Stack Developer | Audiophile"
                 github="https://github.com/abhi204"
               />
               <TeamMate
                 name="Avikant"
-                img="assets/avatars/avatar-3.svg"
+                img="assets/avatars/avatar-7.svg"
                 designation="Data Science | Full Stack Developer"
                 github="https://github.com/AvikantSrivastava"
               />

@@ -12,7 +12,7 @@ export default class SingleQuestion extends React.Component <SingleQuestionProps
   constructor(props){
     super(props);
   }
-  
+
   render(){
   return (
     <>
@@ -21,16 +21,16 @@ export default class SingleQuestion extends React.Component <SingleQuestionProps
         <div className="flex gap-3 text-left md:w-2/3">
           <img
             className="h-12 rounded-full"
-            src="https://cdn.svgporn.com/logos/insomnia.svg"
+            src="assets/svg/ask.png"
             alt=""
           />
           <div>
             <p className="text-lg font-medium leading-none text-black-700">
 
-            {this.props.details ? this.props.details.questionTitle : "Could not fetch question data"}           
+            {this.props.details ? this.props.details.questionTitle : "Could not fetch question data"}
             </p>
             <p className="line-clamp-3 md:line-clamp-1 text-sm text-gray-600 mt-2 ">
-            {this.props.details ? this.props.details.questionDesc : "Could not fetch question data"}           
+            {this.props.details ? this.props.details.questionDesc : "Could not fetch question data"}
             </p>
           </div>
         </div>
@@ -40,8 +40,8 @@ export default class SingleQuestion extends React.Component <SingleQuestionProps
         <div>
 
           <Link href={this.props.details ? this.props.details.questionUrl : ""}>
-          <p className="btn btn-grad text-white w-max">Solve Now</p>
-        
+          <a className="btn btn-grad text-white w-max zoom">Solve Now</a>
+
           </Link>
         </div>
       </div>

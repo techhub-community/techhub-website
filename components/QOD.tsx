@@ -53,14 +53,14 @@ export default class QOD extends React.Component<
                       this.props.basics ? this.props.basics.questionUrl : ''
                     }
                   >
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </button>
+                    </a>
                   </Link>
                   <Link href="/questions#basic-questions">
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </button>
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -84,14 +84,14 @@ export default class QOD extends React.Component<
                   <Link
                     href={this.props.alpha ? this.props.alpha.questionUrl : ''}
                   >
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </button>
+                    </a>
                   </Link>
                   <Link href="/questions#alpha-questions">
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </button>
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -115,14 +115,14 @@ export default class QOD extends React.Component<
                   <Link
                     href={this.props.beta ? this.props.beta.questionUrl : ''}
                   >
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </button>
+                    </a>
                   </Link>
                   <Link href="questions/#beta-questions">
-                    <button className="w-max btn btn-border-grad text-brand-700">
+                    <a className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </button>
+                    </a>
                   </Link>
                 </div>
               </div>
