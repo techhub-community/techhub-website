@@ -1,4 +1,6 @@
-# TechHub-Website
+<img src="public/assets/logo/logo-full-transparent.png"/>
+
+#
 
 Website of TechHub Community using [NextJS](https://nextjs.org/) &amp; [Tailwind CSS](https://www.tailwindcss.com/)
 
@@ -39,8 +41,8 @@ https://github.com/techhub-community/techhub-website/tree/dev) branch.
 ## Learn More(Blogs)
 
 - Node:
- 
-  - [What is Node](https://www.codecademy.com/articles/what-is-node)  
+
+  - [What is Node](https://www.codecademy.com/articles/what-is-node)
 
   - [All about Node](https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm)
 
@@ -49,9 +51,9 @@ https://github.com/techhub-community/techhub-website/tree/dev) branch.
   - [Introduction to the Yarn Package Manager](https://www.digitalocean.com/community/tutorials/js-yarn-package-manager-quick-intro)
 
   - [Yarn: A new package manager](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/)
-    
+
   - [Yarn vs Node](https://www.geeksforgeeks.org/difference-between-npm-and-yarn/)
-    
+
 ## Learn More (Video Lectures)
 
 - [Learn Git & Github ](https://www.youtube.com/watch?v=RGOj5yH7evk&t=296s) -  for beginners.
@@ -84,3 +86,9 @@ https://github.com/techhub-community/techhub-website/tree/dev) branch.
 
 - [Learn Tailwind CSS](https://tailwindcss.com/docs) - Tailwind CSS docs.
 
+
+#
+
+<a href="https://vercel.com?utm_source=techhub-community&utm_campaign=oss" target="_blank">
+  <img src="public/assets/svg/vercel-logo.svg"/>
+</a>

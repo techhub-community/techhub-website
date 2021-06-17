@@ -49,7 +49,7 @@ export default function Stats(props) {
           </div>
           <div className="w-full xl:w-3/12 lg:w-3/12 sm:w-3/12 md:w-3/12  pt-8 pb-8">
             <p className="text-5xl font-bold text-center text-brand-500 pb-1">
-              3
+              30+
             </p>
             <p className="text-2xl text-gray-400 text-center font-normal">
               Events
