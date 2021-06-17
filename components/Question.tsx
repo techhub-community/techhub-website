@@ -7,7 +7,7 @@ export default function Question() {
   return (
     <div className="my-12">
       <div className="flex flex-col items-center justify-center text-center w-full  mb-12">
-        <h1 className="font-semibold text-gray-800 text-3xl md:text-5xl">
+        <h1 className="font-extrabold text-3xl md:text-5xl block w-full text-transparent bg-clip-text bg-gradient-to-bl from-brand-600  to-brand-800">
           Last 10 Days - Question Of The Day
         </h1>
         <p className="lg:w-[60%] px-5 mt-8 text-lg lg:text-xl">

@@ -25,21 +25,19 @@ export default function Team() {
                 name="Avinash Kumar"
                 img="assets/avatars/avatar-6.svg"
                 designation="Data Scientist"
-                lin="linkedin.com/in/iavinas only add my linkedin"
+                lin="https://linkedin.com/in/iavinas"
               />
               <TeamMate
                 name="Shekhar"
                 img="assets/avatars/avatar-2.svg"
                 designation="Speaker | Full Stack Developer"
-                github="github-link"
-                web="web-link"
+                github="https://github.com/sekharjha"
               />
               <TeamMate
                 name="Deep Narayan Tandan"
                 img="assets/avatars/avatar-3.svg"
                 designation="Freelancer | Full Stack Developer"
                 web="https://dntandan.ml"
-                lin="https://linkedin.com/in/dntandan"
                 twitter="https://twitter.com/dntandan"
                 github="https://github.com/dntandan"
               />
