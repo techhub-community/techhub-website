@@ -3,7 +3,6 @@ import React from 'react';
 export default function Stats(props) {
   function getStars() {
     var sum = 0;
-    console.log(props.githubStats);
     props.githubStats.map((element) => {
       sum += element.stargazers_count;
     });
