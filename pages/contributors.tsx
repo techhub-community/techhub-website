@@ -22,7 +22,6 @@ export default class Contributors extends React.Component<
     var conts = await getContributors();
 
     this.setState({ contributors: conts });
-    console.log(conts);
   };
 
   render() {
