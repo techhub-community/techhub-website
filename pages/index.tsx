@@ -8,15 +8,14 @@ import Team from '@/components/Team';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import LLT from '@/components/LLT';
-import firebase from 'firebase';
-import firebaseConfig from '../configs/firebaseConfigs';
 import BarLoader from 'react-spinners/BarLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
 
 import getTechhubStats from '../apis/github';
+
+import getQuestions from '../apis/questions';
 interface HomeState {
   githubStats: any;
-  database: any;
   data: any;
   alpha: any;
   beta: any;
@@ -27,14 +26,7 @@ export default class Home extends React.Component<{}, HomeState> {
   constructor(props) {
     super(props);
 
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
-    } else {
-      firebase.app(); // if already initialized, use that one
-    }
-
     this.state = {
-      database: firebase.database(),
       data: '',
       alpha: null,
       beta: null,
@@ -51,44 +43,31 @@ export default class Home extends React.Component<{}, HomeState> {
       currentDate = getCurrentDate();
     }
 
+    var questions = await getQuestions();
+
     //Get Alpha Question of the day
-    await this.state.database
-      .ref('alpha')
-      .get()
-      .then((snapshot) => {
-        var alphaDto = snapshot.val().filter(function (item) {
-          return item.questionDate === currentDate;
-        });
-        this.setState({
-          alpha: alphaDto[0],
-        });
-      });
+    var alphaDto = questions['alpha'].filter(function (item) {
+      return item.questionDate === currentDate;
+    });
+    this.setState({
+      alpha: alphaDto[0],
+    });
 
     //Get beta question of the day
-    await this.state.database
-      .ref('beta')
-      .get()
-      .then((snapshot) => {
-        var betaDto = snapshot.val().filter(function (item) {
-          return item.questionDate === currentDate;
-        });
-        this.setState({
-          beta: betaDto[0],
-        });
-      });
+    var betaDto = questions['beta'].filter(function (item) {
+      return item.questionDate === currentDate;
+    });
+    this.setState({
+      beta: betaDto[0],
+    });
 
     //Get basics question of the day
-    await this.state.database
-      .ref('basics')
-      .get()
-      .then((snapshot) => {
-        var basicsDto = snapshot.val().filter(function (item) {
-          return item.questionDate === currentDate;
-        });
-        this.setState({
-          basics: basicsDto[0],
-        });
-      });
+    var basicsDto = questions['basics'].filter(function (item) {
+      return item.questionDate === currentDate;
+    });
+    this.setState({
+      basics: basicsDto[0],
+    });
 
     var gitStats = await getTechhubStats();
 
@@ -142,5 +121,7 @@ export default class Home extends React.Component<{}, HomeState> {
         )}
       </>
     );
+
   }
 }
+
