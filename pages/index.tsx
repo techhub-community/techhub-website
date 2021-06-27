@@ -46,8 +46,6 @@ export default class Home extends React.Component<{}, HomeState> {
     var questions = await getQuestions();
 
     //Get Alpha Question of the day
-    console.log(questions);
-
     var alphaDto = questions['alpha'].filter(function (item) {
       return item.questionDate === currentDate;
     });
@@ -123,5 +121,7 @@ export default class Home extends React.Component<{}, HomeState> {
         )}
       </>
     );
+
   }
 }
+
