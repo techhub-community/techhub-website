@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import firebase from 'firebase';
-import firebaseConfig from '../configs/firebaseConfigs';
 
 interface QuestionOfTheDayProps {
   alpha: any;
