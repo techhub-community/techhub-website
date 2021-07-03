@@ -45,13 +45,13 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
   return (
     <>
     <Navbar/>
-      <div className="grid grid-cols-12 gap-x-6 gap-y-8 px-24 py-12">
+      <div className="grid grid-cols-12 gap-x-6 gap-y-12 px-4 md:px-12 xl:px-24 py-12">
         {posts.map((post, index) => {
           return (
 
             <article
               key={post.slug}
-              className="col-span-3 semi-zoom hover:shadow shadow-md"
+              className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 semi-zoom hover:shadow shadow-md"
             >
               <img src={post.feature_image} className="w-full" alt="" />
               <div className="flex flex-col px-6 py-2">
