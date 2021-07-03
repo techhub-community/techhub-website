@@ -31,6 +31,11 @@ const Navbar = () => {
               Home
             </a>
           </Link>
+          <Link href="/blogs">
+            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+              Blogs
+            </a>
+          </Link>
           <Link href="/contributors">
             <a className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contributors
