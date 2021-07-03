@@ -51,7 +51,7 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
 
             <article
               key={post.slug}
-              className="col-span-3 zoom hover:shadow shadow-md"
+              className="col-span-3 semi-zoom hover:shadow shadow-md"
             >
               <img src={post.feature_image} className="w-full" alt="" />
               <div className="flex flex-col px-6 py-2">
@@ -93,6 +93,8 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
 };
 
 export default blogs;
+
+
 function moment(published_at: string) {
   return new Date(published_at).toLocaleDateString('en-US', {
     day: 'numeric',

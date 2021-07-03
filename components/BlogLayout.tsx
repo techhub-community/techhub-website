@@ -7,8 +7,8 @@ const BlogLayout = ({ _metaData, ...props }) => (
   <>
     <Seo _metaData={_metaData} />
     <PageScrollBar
-      color="#0aa863"
-      gradientColor="#2bf29c"
+      color="#C53E65"
+      gradientColor="#F15084"
       gradient={true}
       height={5}
     />
