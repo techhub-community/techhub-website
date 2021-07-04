@@ -5,6 +5,7 @@ import {
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoGithub,
+  IoLogoTwitter,
 } from 'react-icons/io5';
 
 const Navbar = () => {
@@ -54,6 +55,11 @@ const Navbar = () => {
               <Link href="https://www.instagram.com/techhub_community/">
                 <a>
                   <IoLogoInstagram className="text-xl hover:text-brand-500" />
+                </a>
+              </Link>
+              <Link href="https://www.twitter.com/_techhub/">
+                <a>
+                  <IoLogoTwitter className="text-xl hover:text-brand-500" />
                 </a>
               </Link>
               <Link href="https://www.linkedin.com/company/techhub-community">

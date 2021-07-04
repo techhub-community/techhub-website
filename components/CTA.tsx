@@ -2,6 +2,7 @@ import React from 'react';
 import {
   IoLogoFacebook,
   IoLogoInstagram,
+  IoLogoTwitter,
   IoLogoLinkedin,
   IoLogoGithub,
 } from 'react-icons/io5';
@@ -39,6 +40,11 @@ export default function CTA() {
             <Link href="https://www.instagram.com/techhub_community/">
               <a>
                 <IoLogoInstagram className="text-2xl text-gray-200 hover:text-brand-500" />
+              </a>
+            </Link>
+            <Link href="https://www.twitter.com/_techhub">
+              <a>
+                <IoLogoTwitter className="text-2xl text-gray-200 hover:text-brand-500" />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/techhub-community">
