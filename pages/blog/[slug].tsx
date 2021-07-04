@@ -47,9 +47,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return (
-      <CustomLoader/>
-    );
+    return <CustomLoader />;
   }
 
   let metaObject = {
@@ -68,7 +66,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   return (
     <>
       <BlogLayout _metaData={metaObject} title={post.title}>
-        <div className="mb-16 lg:mb-24 items-center px-3 lg:px-6 prose lg:prose-lg mx-auto dark:prose-dark ">
+        <div className="mb-16 lg:mb-24 items-center px-3 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
           <div className="text-center ">
             <p
               className="text-3xl font-semibold my-2"
