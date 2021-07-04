@@ -44,19 +44,22 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="grid grid-cols-12 gap-x-6 gap-y-12 px-4 md:px-12 xl:px-24 py-12">
         {posts.map((post, index) => {
           return (
-
             <article
               key={post.slug}
               className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 semi-zoom hover:shadow shadow-md"
             >
               <img src={post.feature_image} className="w-full" alt="" />
               <div className="flex flex-col px-6 py-2">
-                <a href={`blog/${post.slug}`}><h1 className="font-semibold text-lg mb-4">{post.title}</h1></a>
-                <summary className="line-clamp-3">{post.custom_excerpt}</summary>
+                <a href={`blog/${post.slug}`}>
+                  <h1 className="font-semibold text-lg mb-4">{post.title}</h1>
+                </a>
+                <summary className="line-clamp-3">
+                  {post.custom_excerpt}
+                </summary>
                 <summary className="my-4 text-sm flex gap-2">
                   <p className="text-brand-500 font-semibold tracking-widest">
                     {post.reading_time} Minute(s) Read
@@ -82,23 +85,21 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
                   ''
                 )}
               </div>
-
             </article>
           );
         })}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default blogs;
 
-
 function moment(published_at: string) {
   return new Date(published_at).toLocaleDateString('en-US', {
     day: 'numeric',
-    month: 'long',
+    month: 'short',
     year: 'numeric',
   });
 }
