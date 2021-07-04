@@ -2,6 +2,7 @@ import React from 'react';
 import {
   IoLogoFacebook,
   IoLogoInstagram,
+  IoLogoTwitter,
   IoLogoLinkedin,
   IoLogoGithub,
 } from 'react-icons/io5';
@@ -9,7 +10,7 @@ import Link from 'next/link';
 
 export default function CTA() {
   return (
-    <div className="bg-black-800 mx-auto py-8">
+    <div className="bg-[#040E17] mx-auto py-8">
       <div className="relative xl:px-20 lg:px-20 md:px-12 pt-10 flex flex-col justify-center items-center">
         <h1 className="text-center xl:text-4xl text-3xl xl:w-4/6 w-5/6 mx-auto font-extrabold text-gray-200">
           Join US
@@ -39,6 +40,11 @@ export default function CTA() {
             <Link href="https://www.instagram.com/techhub_community/">
               <a>
                 <IoLogoInstagram className="text-2xl text-gray-200 hover:text-brand-500" />
+              </a>
+            </Link>
+            <Link href="https://www.twitter.com/_techhub">
+              <a>
+                <IoLogoTwitter className="text-2xl text-gray-200 hover:text-brand-500" />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/techhub-community">

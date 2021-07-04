@@ -28,6 +28,13 @@ export default function Footer() {
               </li>
             </a>
           </Link>
+          <Link href="/blogs">
+            <a>
+              <li className="lg:text-lg text-sm leading-5 lg:mr-10 mr-2 flex flex-col items-end justify-end font-normal cursor-pointer hover:text-brand-600">
+                Blogs
+              </li>
+            </a>
+          </Link>
           <Link href="/contributors">
             <a>
               <li className="lg:text-lg text-sm leading-5 lg:mr-10 mr-2 flex flex-col items-end justify-end font-normal cursor-pointer hover:text-brand-600">
