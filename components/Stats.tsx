@@ -13,7 +13,7 @@ export default function Stats(props) {
     return props.githubStats.length;
   }
   return (
-    <div className="bg-[#040E17] mx-auto py-16">
+    <div className="bg-black-800 mx-auto py-16">
       <div className="relative xl:px-20 lg:px-20 md:px-12 pt-10">
         <h1 className="text-center xl:text-4xl text-3xl xl:w-4/6 w-5/6 mx-auto font-extrabold text-gray-200">
           TechHub in Numbers

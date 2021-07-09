@@ -8,7 +8,7 @@ import Team from '@/components/Team';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import LLT from '@/components/LLT';
-import CustomLoader from '@/components/CustomLoader';
+import BarLoader from 'react-spinners/BarLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
 
 import getTechhubStats from '../apis/github';
@@ -103,7 +103,21 @@ export default class Home extends React.Component<{}, HomeState> {
             <Footer />
           </div>
         ) : (
-          <CustomLoader/>
+          <div className="flex flex-col justify-center items-center place-items-center h-screen my-auto ">
+            <img
+              src="/assets/logo/logo-full-transparent.png"
+              className="h-16"
+              alt=""
+            />
+            <div className="my-3 flex">
+              <BarLoader
+                loading={true}
+                color="#6a0a37"
+                height={3}
+                width={100}
+              />
+            </div>
+          </div>
         )}
       </>
     );
