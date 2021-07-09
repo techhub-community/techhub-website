@@ -68,7 +68,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   return (
     <>
       <BlogLayout _metaData={metaObject} title={post.title}>
-        <div className="mb-16 lg:mb-24 items-center px-3 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
+        <div className="mb-16 lg:mb-24 items-center px-5 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
           <div className="text-center ">
             <p
               className="text-3xl font-semibold my-2"
@@ -92,7 +92,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
           ></span>
           <hr />
         </div>
-        <div className="flex flex-col mx-96 gap-3 mb-12 -mt-12">
+        <div className="flex flex-col mx-6 md:mx-48 lg:mx-96 gap-3 mb-12 -mt-12">
           <h6 className="font-semibold mb-0 flex-start">Author :</h6>
           {post.authors.map((item) => (
             <>
