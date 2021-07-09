@@ -555,6 +555,13 @@
     lodash.merge "^4.6.2"
     lodash.uniq "^4.5.0"
 
+"@tryghost/content-api@^1.5.10":
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.5.10.tgz#19e56790e1d6ad5f23ecfef57a30d414b5a85987"
+  integrity sha512-zzNyV0PWHeFGgbiMkMEi1Xp7uQldKYNTQPeah2vijHwHyV2aYq1EWFgl9WDDEA02CoWxAM/5dK19BZfc6N1Dww==
+  dependencies:
+    axios "^0.21.1"
+
 "@types/long@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"

@@ -1,48 +1,50 @@
 import { useRouter } from 'next/router';
 import BlogLayout from '@/components/BlogLayout';
-import { useState } from 'react';
+import { getSinglePost, getPosts } from '@/lib/blogs';
 import CustomLoader from '@/components/CustomLoader';
-import BarLoader from 'react-spinners/BarLoader';
-
-const { BLOG_URL, CONTENT_API_KEY } = process.env;
-
-async function getPost(slug: string) {
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html,feature_image,custom_excerpt`
-  ).then((res) => res.json());
-
-  const posts = res.posts;
-
-  return posts[0];
-}
-
-// Ghost CMS Request
-export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
-  return {
-    props: { post },
-    revalidate: 10,
-  };
-};
-
-export const getStaticPaths = () => {
-  return {
-    paths: [],
-    fallback: true,
-  };
-};
+import React from 'react';
+import Link from 'next/link';
 
 type Post = {
   title: string;
   html: string;
   slug: string;
+  tags: any;
   custom_excerpt: string;
-  feature_image: string;
+  authors: any;
+  id: string;
+  dateFormatted: any;
+  feature_image: any;
 };
+
+// Static Filesystem Cache
+export async function getStaticPaths() {
+  const posts = await getPosts();
+
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  // { fallback: false } means posts not found should 404.
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps(context) {
+  const post = await getSinglePost(context.params.slug);
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { post },
+  };
+}
 
 const Post: React.FC<{ post: Post }> = (props) => {
   const { post } = props;
-  const [enableLoadComments, setEnableLoadComments] = useState<boolean>(true);
 
   const router = useRouter();
 
@@ -88,10 +90,30 @@ const Post: React.FC<{ post: Post }> = (props) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             className="dark:text-white"
           ></span>
+          <hr />
+        </div>
+        <div className="flex flex-col mx-96 gap-3 mb-12 -mt-12">
+          <h6 className="font-semibold mb-0 flex-start">Author :</h6>
+          {post.authors.map((item) => (
+            <>
+              <div className="flex mt-3 gap-3">
+                <img
+                  src={item.profile_image}
+                  className="h-16 rounded-full"
+                  alt=""
+                />
+                <div className="gap-0">
+                  <h5 className="font-medium" key={item.name}>
+                    {item.name} ({item.slug})
+                  </h5>
+                  <p key={item.bio}>{item.bio}</p>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
       </BlogLayout>
     </>
   );
 };
-
 export default Post;

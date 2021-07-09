@@ -1,36 +1,21 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import Pills from '@/components/Pills';
-
-const { BLOG_URL, CONTENT_API_KEY } = process.env;
-
-type Tags = {
-  slug: string;
-};
+import { getPosts } from '@/lib/blogs';
+import Head from 'next/head';
 
 type Post = {
   title: string;
   slug: string;
   published_at: string;
   custom_excerpt: string;
-  tags: Tags[];
-  primary_tag: string;
-  reading_time: number;
+  tags: any;
+  primary_tag: any;
+  reading_time: Float32Array;
   html: string;
   feature_image: string;
 };
-
-async function getPosts() {
-  // curl the blog posts from the content api
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,feature_image,custom_excerpt,published_at,primary_tag,reading_time,html&include=tags`
-  ).then((res) => res.json());
-
-  const posts = res.posts;
-
-  return posts;
-}
 
 export const getStaticProps = async ({ params }) => {
   const posts = await getPosts();
@@ -40,10 +25,21 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
+function moment(published_at: string) {
+  return new Date(published_at).toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
 const blogs: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
   return (
     <>
+      <Head>
+        <title>Blogs - TechHub :: Community</title>
+      </Head>
       <Navbar />
       <div className="grid grid-cols-12 gap-x-6 gap-y-12 px-4 md:px-12 xl:px-24 py-12">
         {posts.map((post, index) => {
@@ -95,11 +91,3 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
 };
 
 export default blogs;
-
-function moment(published_at: string) {
-  return new Date(published_at).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
-}
