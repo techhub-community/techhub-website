@@ -4,6 +4,7 @@ import { getSinglePost, getPosts } from '@/lib/blogs';
 import CustomLoader from '@/components/CustomLoader';
 import React from 'react';
 import Link from 'next/link';
+import Pills from '@/components/Pills';
 
 type Post = {
   title: string;
@@ -13,6 +14,7 @@ type Post = {
   custom_excerpt: string;
   authors: any;
   id: string;
+  primary_tag: any;
   dateFormatted: any;
   feature_image: any;
 };
@@ -68,35 +70,33 @@ const Post: React.FC<{ post: Post }> = (props) => {
   return (
     <>
       <BlogLayout _metaData={metaObject} title={post.title}>
-        <div className="mb-16 lg:mb-24 items-center px-5 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
-          <div className="text-center ">
-            <p
-              className="text-3xl font-semibold my-2"
-              style={{ marginBottom: '0px' }}
-            >
-              {post.title}
-            </p>
-            <p className="" style={{ marginTop: '5px' }}>
-              {post.custom_excerpt}
-            </p>
+        <div className="flex flex-col my-16">
+          <div className="mx-6 lg:mx-[28%] text-md lg:text-xl">
+            {post.primary_tag ? (
+              <div className="flex flex-wrap gap-2 -ml-1 mt-1 mb-3 ">
+                {post.tags
+                  ? post.tags.map((item) => (
+                      <Pills
+                        key={item.slug}
+                        text={item.slug}
+                        cname="bg-gray-200 text-xs text-black py-1"
+                      />
+                    ))
+                  : ''}
+              </div>
+            ) : (
+              ''
+            )}
           </div>
-          <img
-            className="cover lazyload"
-            src={post.feature_image}
-            data-zoom
-            alt=""
-          />
-          <span
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            className="dark:text-white"
-          ></span>
-          <hr />
-        </div>
-        <div className="flex flex-col mx-6 md:mx-48 lg:mx-96 gap-3 mb-12 -mt-12">
-          <h6 className="font-semibold mb-0 flex-start">Author :</h6>
+          <h1 className="text-3xl md:text-5xl font-semibold my-2 mx-6 lg:mx-[28%]">
+            {post.title}
+          </h1>
+          <p className="mx-6 lg:mx-[28%] my-1 lg:my-3 text-md lg:text-xl">
+            {post.custom_excerpt}
+          </p>
           {post.authors.map((item) => (
             <>
-              <div className="flex mt-3 gap-3">
+              <div className="flex mt-3 gap-3 mx-6 lg:mx-[28%] mb-12 text-md lg:text-lg">
                 <img
                   src={item.profile_image}
                   className="h-16 rounded-full"
@@ -111,6 +111,18 @@ const Post: React.FC<{ post: Post }> = (props) => {
               </div>
             </>
           ))}
+          <img
+            className="cover lazyload mx-6 lg:mx-[22%] rounded"
+            src={post.feature_image}
+            data-zoom
+            alt=""
+          />
+        </div>
+        <div className="mb-16 lg:mb-24 items-center px-5 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
+          <span
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className="dark:text-white"
+          ></span>
         </div>
       </BlogLayout>
     </>
