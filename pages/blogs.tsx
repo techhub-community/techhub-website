@@ -11,6 +11,7 @@ type Post = {
   published_at: string;
   custom_excerpt: string;
   tags: any;
+  authors: any;
   primary_tag: any;
   reading_time: Float32Array;
   html: string;
@@ -41,30 +42,21 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
         <title>Blogs - TechHub :: Community</title>
       </Head>
       <Navbar />
-      <div className="grid grid-cols-12 gap-x-6 gap-y-12 px-4 md:px-12 xl:px-24 py-12">
+      <div className="mx-6 md:mx-12 xl:mx-48 my-16">
         {posts.map((post, index) => {
           return (
             <article
               key={post.slug}
-              className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 semi-zoom hover:shadow shadow-md"
+              className="flex flex-col lg:flex-row gap-x-8 mb-12 semi-zoom"
             >
-              <img src={post.feature_image} className="w-full" alt="" />
-              <div className="flex flex-col px-6 py-2">
-                <a href={`blog/${post.slug}`}>
-                  <h1 className="font-semibold text-lg mb-4">{post.title}</h1>
-                </a>
-                <summary className="line-clamp-3">
-                  {post.custom_excerpt}
-                </summary>
-                <summary className="my-4 text-sm flex gap-2">
-                  <p className="text-brand-500 font-semibold tracking-widest">
-                    {post.reading_time} Minute(s) Read
-                  </p>
-                  <p>|</p>
-                  <p className="text-blue-500 font-semibold capitalize tracking-widest">
-                    {moment(post.published_at)}
-                  </p>
-                </summary>
+              <div className="flex-1 mb-6 lg:mb-0">
+                <img
+                  src={post.feature_image}
+                  alt={post.title}
+                  className="rounded-xl lg:h-72 float-right"
+                />
+              </div>
+              <div className="flex-1 mx-2 lg:mx-0 self-center">
                 {post.primary_tag ? (
                   <div className="flex flex-wrap gap-2 -ml-1 mt-1 mb-3">
                     {post.tags
@@ -80,6 +72,40 @@ const blogs: React.FC<{ posts: Post[] }> = (props) => {
                 ) : (
                   ''
                 )}
+                <a href={`blog/${post.slug}`}>
+                  <h2 className="font-semibold text-3xl tracking-wider hover:text-brand-500">
+                    {post.title}
+                  </h2>
+                </a>
+                <p className="my-1 text-lg">{post.custom_excerpt}</p>
+                <summary className="my-2 text-sm flex gap-2">
+                  <p className="text-brand-500 font-semibold tracking-widest">
+                    {post.reading_time} Minute(s) Read
+                  </p>
+                  <p>|</p>
+                  <p className="text-blue-500 font-semibold capitalize tracking-widest">
+                    {moment(post.published_at)}
+                  </p>
+                </summary>
+                <div>
+                  {post.authors.map((item) => (
+                    <>
+                      <div className="flex mt-3 gap-3">
+                        <img
+                          src={item.profile_image}
+                          className="h-12 rounded-full"
+                          alt=""
+                        />
+                        <div className="gap-0">
+                          <h5 className="font-medium" key={item.name}>
+                            {item.name}
+                          </h5>
+                          <p key={item.bio}>{item.bio}</p>
+                        </div>
+                      </div>
+                    </>
+                  ))}
+                </div>
               </div>
             </article>
           );
