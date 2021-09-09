@@ -37,6 +37,11 @@ const Navbar = () => {
               Blogs
             </a>
           </Link>
+          <Link href="/events">
+            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+              Events
+            </a>
+          </Link>
           <Link href="/contributors">
             <a className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contributors
