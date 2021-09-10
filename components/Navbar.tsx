@@ -37,6 +37,11 @@ const Navbar = () => {
               Blogs
             </a>
           </Link>
+          <Link href="/events">
+            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+              Events
+            </a>
+          </Link>
           <Link href="/contributors">
             <a className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contributors
@@ -132,6 +137,13 @@ const Navbar = () => {
                   <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Blogs
+                    </li>
+                  </a>
+                </Link>
+                <Link href="/events">
+                  <a>
+                    <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                      Events
                     </li>
                   </a>
                 </Link>
