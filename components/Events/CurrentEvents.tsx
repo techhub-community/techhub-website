@@ -1,5 +1,7 @@
 import React from 'react';
-import EventCard from '@/components/EventCards/EventCard';
+import EventCard from '@/components/Events/EventCard';
+import { CurrentEventsList } from '@/components/Events/EventsList';
+
 export default function CurrentEvents() {
   return (
     <section className="bg-gray-50">
@@ -12,24 +14,17 @@ export default function CurrentEvents() {
         <div className="flex items-center justify-center w-full">
           <div className="w-10/12">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              <EventCard
-                name="Competitive Coding"
-                img="assets/posters/cp.jpg"
-                date="Daily"
-                about="Doubt discussions"
-              />
-              <EventCard
-                name="Hackathon"
-                img="assets/posters/hackathon.jpg"
-                date="----"
-                about="exciting hackathons"
-              />
-              <EventCard
-                name="Web-Dev"
-                img="assets/posters/webd.png"
-                date="-----"
-                about="Basics of HTML,CSS and JS"
-              />
+              {CurrentEventsList.map((event) => (
+                <>
+                  <EventCard
+                    name={event.name}
+                    img={event.img}
+                    date={event.date}
+                    about={event.about}
+                    desc={event.desc}
+                  />
+                </>
+              ))}
             </div>
           </div>
         </div>
