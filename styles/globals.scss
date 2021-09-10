@@ -96,7 +96,20 @@ a {
 .semi-zoom{
   @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105;
 }
-
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0 6px rgba(170, 168, 168, 0.034);
+  border-radius: 18px;
+  }
+  ::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb {
+  background-color: rgb(90, 89, 89);
+  margin-top: 10px;
+  border-radius: 6px;
+  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
