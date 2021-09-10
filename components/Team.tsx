@@ -67,14 +67,18 @@ export default function Team() {
       img: 'assets/avatars/avatar-11.svg',
       designation: 'CP | Problem Solver',
       github: 'https://github.com/ashish-gopalika',
+      lin: 'https://www.linkedin.com/in/ashish-gopalika-308529215/'
     },
     {
-      name: 'Kushagra Aggarwal',
+      name: 'Kushagra Agarwal',
       img: 'assets/avatars/avatar-12.svg',
       designation:
-        'No one stays forever but you Your goals will happen, so focus',
+        'Python | CP | Problem Solver',
       github: 'https://github.com/codewithkushagra',
-      twitter: 'https://twitter.com/kushagra_agra08',
+      web: 'https://codewithkushagra.netlify.app/',
+      lin: 'https://www.linkedin.com/in/kushagra-agarwal-a843721a8/',
+      twitter: 'https://twitter.com/kushagra_agra08'
+      
     },
     {
       name: 'Ritik Anubhav',
@@ -89,7 +93,15 @@ export default function Team() {
       img: 'assets/avatars/avatar-14.svg',
       designation: 'Love Problem solving',
       github: 'https://github.com/HarshitGulgulia',
+      lin: 'https://www.linkedin.com/in/harshit-gulgulia-a8787b176/',
       twitter: 'https://twitter.com/HarshitGulgulia',
+    },
+    {
+      name: 'Manas Dewari',
+      img: 'assets/avatars/avatar-15.svg',
+      designation: 'Love Problem solving | Web Development',
+      github: 'https://github.com/manassinghdewari',
+      lin: 'https://www.linkedin.com/in/manas-dewari-2717441a9/',
     },
   ];
 
