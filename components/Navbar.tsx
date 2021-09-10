@@ -140,6 +140,13 @@ const Navbar = () => {
                     </li>
                   </a>
                 </Link>
+                <Link href="/events">
+                  <a>
+                    <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
+                      Events
+                    </li>
+                  </a>
+                </Link>
                 <Link href="/contributors">
                   <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
