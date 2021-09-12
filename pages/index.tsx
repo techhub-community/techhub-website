@@ -1,19 +1,17 @@
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Stats from '@/components/Stats';
-import QOD from '@/components/QOD';
-import Team from '@/components/Team';
-import Footer from '@/components/Footer';
-import CTA from '@/components/CTA';
-import LLT from '@/components/LLT';
-import CustomLoader from '@/components/CustomLoader';
-import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
-
-import getTechhubStats from '../apis/github';
-
-import getQuestions from '../apis/questions';
+import React from 'react';
+import Navbar from '@/components/Global/Navbar';
+import Hero from '@/components/index/Hero';
+import Stats from '@/components/index/Stats';
+import QOD from '@/components/index/QOD';
+import Team from '@/components/Team/Team';
+import Footer from '@/components/Global/Footer';
+import CTA from '@/components/index/CTA';
+import LLT from '@/components/index/LLT';
+import CustomLoader from '@/components/Global/CustomLoader';
+import getCurrentDate, { getNextDate, isPastQODTime } from '@/common/helpers';
+import getTechhubStats from '@/apis/github';
+import getQuestions from '@/apis/questions';
 interface HomeState {
   githubStats: any;
   data: any;
@@ -103,11 +101,9 @@ export default class Home extends React.Component<{}, HomeState> {
             <Footer />
           </div>
         ) : (
-          <CustomLoader/>
+          <CustomLoader />
         )}
       </>
     );
-
   }
 }
-

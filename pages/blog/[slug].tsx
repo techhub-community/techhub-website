@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
-import BlogLayout from '@/components/BlogLayout';
+import BlogLayout from '@/components/Blogs/BlogLayout';
 import { getSinglePost, getPosts } from '@/lib/blogs';
-import CustomLoader from '@/components/CustomLoader';
+import CustomLoader from '@/components/Global/CustomLoader';
 import React from 'react';
 import Link from 'next/link';
-import Pills from '@/components/Pills';
+import Pills from '@/components/Blogs/Pills';
 
 type Post = {
   title: string;
@@ -121,7 +121,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
         <div className="mb-16 lg:mb-24 items-center px-5 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
           <span
             dangerouslySetInnerHTML={{ __html: post.html }}
-            className="dark:text-white"
+            className="dark:text-white break-words"
           ></span>
         </div>
       </BlogLayout>

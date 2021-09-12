@@ -4,6 +4,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
+      "@/common/*": ["common/*"],
+      "@/apis/*": ["apis/*"],
     },
     "target": "es5",
     "lib": [

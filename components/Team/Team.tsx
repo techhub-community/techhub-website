@@ -67,18 +67,16 @@ export default function Team() {
       img: 'assets/avatars/avatar-11.svg',
       designation: 'CP | Problem Solver',
       github: 'https://github.com/ashish-gopalika',
-      lin: 'https://www.linkedin.com/in/ashish-gopalika-308529215/'
+      lin: 'https://www.linkedin.com/in/ashish-gopalika-308529215/',
     },
     {
       name: 'Kushagra Agarwal',
       img: 'assets/avatars/avatar-12.svg',
-      designation:
-        'Python | CP | Problem Solver',
+      designation: 'Python | CP | Problem Solver',
       github: 'https://github.com/codewithkushagra',
       web: 'https://codewithkushagra.netlify.app/',
       lin: 'https://www.linkedin.com/in/kushagra-agarwal-a843721a8/',
-      twitter: 'https://twitter.com/kushagra_agra08'
-      
+      twitter: 'https://twitter.com/kushagra_agra08',
     },
     {
       name: 'Ritik Anubhav',
