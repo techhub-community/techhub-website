@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Global/Navbar';
 import React from 'react';
 import PastEvent from '@/components/Events/PastEvents';
 import CurrentEvents from '@/components/Events/CurrentEvents';
 import UpcomingEvents from '@/components/Events/UpcomingEvents';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Global/Footer';
 
 const events = () => {
   return (

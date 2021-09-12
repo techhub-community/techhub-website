@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
-import BlogLayout from '@/components/BlogLayout';
+import BlogLayout from '@/components/Blogs/BlogLayout';
 import { getSinglePost, getPosts } from '@/lib/blogs';
-import CustomLoader from '@/components/CustomLoader';
+import CustomLoader from '@/components/Global/CustomLoader';
 import React from 'react';
 import Link from 'next/link';
-import Pills from '@/components/Pills';
+import Pills from '@/components/Blogs/Pills';
 
 type Post = {
   title: string;

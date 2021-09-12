@@ -1,7 +1,7 @@
 import React from 'react';
-import AlphaQuestions from './Question/AlphaQuestions';
-import BasicQuestions from './Question/BasicQuestions';
-import BetaQuestions from './Question/BetaQuestions';
+import AlphaQuestions from './AlphaQuestions';
+import BasicQuestions from './BasicQuestions';
+import BetaQuestions from './BetaQuestions';
 
 export default function Question() {
   return (
