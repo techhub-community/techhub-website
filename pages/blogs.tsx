@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Pills from '@/components/Pills';
+import Navbar from '@/components/Global/Navbar';
+import Footer from '@/components/Global/Footer';
+import Pills from '@/components/Blogs/Pills';
 import { getPosts } from '@/lib/blogs';
 import Head from 'next/head';
 

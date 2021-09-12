@@ -1,5 +1,5 @@
 import React from 'react';
-import LLTCard from './Services/LLTCard';
+import LLTCard from './LLTCard';
 
 export default function LLT() {
   return (

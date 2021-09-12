@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '@/components/Modal';
+import Modal from '@/components/Modal/Modal';
 
 export default function EventCard(props) {
   const [modalOpen, setModalOpen] = useState(false);

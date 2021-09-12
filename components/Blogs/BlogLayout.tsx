@@ -1,7 +1,7 @@
 import React from 'react';
-import Seo from '@/components/Seo';
-import PageScrollBar from '@/components/PageScrollBar';
-import Navbar from '@/components/Navbar';
+import Seo from '@/components/Global/Seo';
+import PageScrollBar from '@/components/Blogs/PageScrollBar';
+import Navbar from '@/components/Global/Navbar';
 
 const BlogLayout = ({ _metaData, ...props }) => (
   <>
@@ -12,7 +12,7 @@ const BlogLayout = ({ _metaData, ...props }) => (
       gradient={true}
       height={5}
     />
-    <Navbar/>
+    <Navbar />
     {props.children}
   </>
 );

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Global/Navbar';
 import React from 'react';
-import Cont from '@/components/Cont';
+import Cont from '@/components/Contributors/Cont';
 import { getContributors } from 'apis/github';
 
-import Footer from '@/components/Footer';
+import Footer from '@/components/Global/Footer';
 interface ContributorsState {
   contributors: any;
 }
