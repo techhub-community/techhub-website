@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '@/components/Global/Navbar';
 import Hero from '@/components/index/Hero';
 import Stats from '@/components/index/Stats';
@@ -9,11 +9,9 @@ import Footer from '@/components/Global/Footer';
 import CTA from '@/components/index/CTA';
 import LLT from '@/components/index/LLT';
 import CustomLoader from '@/components/Global/CustomLoader';
-import getCurrentDate, { getNextDate, isPastQODTime } from '../common/helpers';
-
-import getTechhubStats from '../apis/github';
-
-import getQuestions from '../apis/questions';
+import getCurrentDate, { getNextDate, isPastQODTime } from '@/common/helpers';
+import getTechhubStats from '@/apis/github';
+import getQuestions from '@/apis/questions';
 interface HomeState {
   githubStats: any;
   data: any;
