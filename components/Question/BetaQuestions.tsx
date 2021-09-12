@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleQuestion from './SingleQuestion';
-import { get10Days } from '../../common/helpers';
+import { get10Days } from '@/common/helpers';
 import getQuestions from 'apis/questions';
 interface BetaQuestionsState {
   beta: any;
@@ -54,7 +54,5 @@ export default class BetaQuestions extends React.Component<
         </div>
       </>
     );
-
   }
 }
-

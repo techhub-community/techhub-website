@@ -1,7 +1,7 @@
 import React from 'react';
 import SingleQuestion from './SingleQuestion';
-import { get10Days } from '../../common/helpers';
-import getQuestions from 'apis/questions';
+import { get10Days } from '@/common/helpers';
+import getQuestions from '@/apis/questions';
 
 interface BasicsQuestionsState {
   basics: any;
