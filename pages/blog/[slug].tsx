@@ -121,7 +121,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
         <div className="mb-16 lg:mb-24 items-center px-5 lg:px-6 prose lg:prose-lg xl:prose-xl mx-auto dark:prose-dark ">
           <span
             dangerouslySetInnerHTML={{ __html: post.html }}
-            className="dark:text-white"
+            className="dark:text-white break-words"
           ></span>
         </div>
       </BlogLayout>
