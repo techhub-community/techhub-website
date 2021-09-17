@@ -9,20 +9,24 @@ const api = new GhostContentAPI({
 });
 
 export async function getPosts() {
-  return await api.posts
+  var posts = api.posts
     .browse({
       limit: 'all',
-      include: 'tags,authors,published_at,reading_time,custom_excerpt'
+      include: 'tags,authors,published_at,reading_time,custom_excerpt',
+    })
+    .then((posts) => {
+      return posts;
     })
     .catch((err) => {
       console.error(err);
     });
+  return posts;
 }
 export async function getSinglePost(postSlug) {
   return await api.posts
     .read({
       slug: postSlug,
-      include: 'tags,authors,published_at,reading_time,custom_excerpt'
+      include: 'tags,authors,published_at,reading_time,custom_excerpt',
     })
     .catch((err) => {
       console.error(err);
