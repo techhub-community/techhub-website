@@ -7,18 +7,18 @@ export const CurrentEventsList = [
     desc:"We regularly have doubt sessions on our Discord server regarding the questions which are uploaded on TechHub website daily."
   },
   {
+    name: 'Hacktober',
+    img: 'assets/posters/hacktober1.png',
+    date: 'Oct 10th to oct 30th',
+    about: 'Open source and Hacktoberfest',
+    desc:"Get to Learn about open source contributions and participate in hacktober fest and discussion mettings. First session will be conducted on october 10th,2021 from 6 pm sharp. The speaker for the day will be Aditya keshri, who is currently working as an Associate Software Engineer at Danske Bank."
+  },
+  {
     name: 'Hackathon',
     img: 'assets/posters/hackathon.jpg',
     date: '-----',
     about: 'Exciting hackathons',
     desc:"we encourage our members to participate in hackathons and discussion metting are organised before and afetr hackathon for sharing of Ideas and experience among all members."
-  },
-  {
-    name: 'Web-Dev',
-    img: 'assets/posters/webd.png',
-    date: '-----',
-    about: 'Basics of HTML,CSS and JS',
-    desc:""
   },
 ];
 
