@@ -63,7 +63,7 @@ export default function Team() {
       github: 'https://github.com/anjali112-bit',
     },
     {
-      name: 'Ashish Gopalika',
+      name: 'Ashish Kumar Gopalika',
       img: 'assets/avatars/avatar-11.svg',
       designation: 'CP | Problem Solver',
       github: 'https://github.com/ashish-gopalika',
@@ -100,6 +100,14 @@ export default function Team() {
       designation: 'Love Problem solving | Web Development',
       github: 'https://github.com/manassinghdewari',
       lin: 'https://www.linkedin.com/in/manas-dewari-2717441a9/',
+    },
+    {
+      name: 'Piyushraj Singh',
+      img: 'assets/avatars/avatar-8.svg',
+      designation: 'Love Problem solving | C++ | SQL | DBMS | Cyber sec freak',
+      github: 'https://github.com/Piy6513',
+      lin: 'https://www.linkedin.com/in/piyushraj-singh-523711206/',
+      twitter: 'https://twitter.com/PiyushS6513',
     },
   ];
 
