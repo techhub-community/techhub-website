@@ -3,22 +3,15 @@ export const CurrentEventsList = [
     name: 'Competitive Coding',
     img: 'assets/posters/cp.jpg',
     date: 'Daily',
-    about: 'Doubt discussions',
+    about: 'Doubt Discussions',
     desc:"We regularly have doubt sessions on our Discord server regarding the questions which are uploaded on TechHub website daily."
   },
   {
-    name: 'Hacktober',
-    img: 'assets/posters/hacktober1.png',
-    date: 'Oct 10th to oct 30th',
-    about: 'Open source and Hacktoberfest',
-    desc:"Get to Learn about open source contributions and participate in hacktober fest and discussion mettings. First session will be conducted on october 10th,2021 from 6 pm sharp. The speaker for the day will be Aditya keshri, who is currently working as an Associate Software Engineer at Danske Bank."
-  },
-  {
-    name: 'Hackathon',
-    img: 'assets/posters/hackathon.jpg',
-    date: '-----',
-    about: 'Exciting hackathons',
-    desc:"we encourage our members to participate in hackathons and discussion metting are organised before and afetr hackathon for sharing of Ideas and experience among all members."
+    name: 'TECHVISTARA',
+    img: 'assets/posters/TechVistara Final.png',
+    date: 'March 31st, 2022',
+    about: 'Various Tech Fields and Quiz',
+    desc:"What is TECHVISTARA? A brief intro of various tech fields and industry relevant topics. A generic tech quiz based on the session and an open QnA round."
   },
 ];
 
@@ -26,7 +19,7 @@ export const CurrentEventsList = [
 
 export const PastEventsList = [
   {
-    name: 'Java Workshop!',
+    name: 'Java Workshop',
     img: 'assets/posters/java.jpg',
     date: 'March 1st, 2021',
     about: 'Object Oriented Programming',
@@ -57,6 +50,14 @@ export const PastEventsList = [
     about: 'Getting Started With NLP',
     desc:"It was a getting started with NLP workshop and the basics were discussed.Some cool implementations of NLP were discussed, it was a hands-on workshop."
   },
+
+  {
+    name: 'Hacktober',
+    img: 'assets/posters/hacktober1.png',
+    date: 'October 2021',
+    about: 'Open Source and Hacktoberfest',
+    desc:"Get to Learn about open source contributions and participate in hacktober fest and discussion mettings. First session will be conducted on october 10th,2021 from 6 pm sharp. The speaker for the day will be Aditya keshri, who is currently working as an Associate Software Engineer at Danske Bank."
+  },
 ];
 
 
@@ -66,7 +67,14 @@ export const UpcomingEventsList = [
     name:"DSA",
     img:"assets/posters/DSA.jpg",
     date:"Coming Soon",
-    about:"Data structures and algorithms",
+    about:"Data Structures and Algorithms",
     desc:" "
-},
+  },
+  {
+    name: 'Hackathon',
+    img: 'assets/posters/hackathon.jpg',
+    date: '-----',
+    about: 'Exciting Hackathons',
+    desc:"we encourage our members to participate in hackathons and discussion metting are organised before and afetr hackathon for sharing of Ideas and experience among all members."
+  },
 ];
