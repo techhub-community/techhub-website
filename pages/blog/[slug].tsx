@@ -57,11 +57,11 @@ const Post: React.FC<{ post: Post }> = (props) => {
   let metaObject = {
     n_title: `${post.title} :: TechHub Community Blog`,
     n_description: `${post.custom_excerpt}`,
-    n_og_url: `https://tech-hub.org/blog/${post.slug}`,
+    n_og_url: `https://techhub.org.in/blog/${post.slug}`,
     n_og_title: `${post.title} :: TechHub Community Blog`,
     n_og_description: `${post.custom_excerpt}`,
     n_og_image: `${post.feature_image}`,
-    n_twitter_url: `https://tech-hub.org/blog/${post.slug}`,
+    n_twitter_url: `https://techhub.org.in/blog/${post.slug}`,
     n_twitter_title: `${post.title} :: TechHub Community Blog`,
     n_twitter_description: `${post.custom_excerpt}`,
     n_twitter_image: `${post.feature_image}`,
