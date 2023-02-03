@@ -8,7 +8,7 @@ Website of TechHub Community using [NextJS](https://nextjs.org/) &amp; [Tailwind
 
 dev -> Use this for staging, all PRs should be made to this branch. url: https://techhuborg.ml
 
-main -> Don't touch without approval, this is what's running in PROD. url: https://tech-hub.org
+main -> Don't touch without approval, this is what's running in PROD. url: https://techhub.org.in
 
 ## Getting Started
 
