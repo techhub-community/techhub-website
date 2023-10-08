@@ -49,16 +49,12 @@ export default class QOD extends React.Component<
                   <Link
                     href={
                       this.props.basics ? this.props.basics.questionUrl : ''
-                    }
+                    } className="w-max btn btn-border-grad text-brand-700"
                   >
-                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </a>
                   </Link>
-                  <Link href="/questions#basic-questions">
-                    <a className="w-max btn btn-border-grad text-brand-700">
+                  <Link href="/questions#basic-questions" className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </a>
                   </Link>
                 </div>
               </div>
@@ -80,16 +76,12 @@ export default class QOD extends React.Component<
                 </p>
                 <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
                   <Link
-                    href={this.props.alpha ? this.props.alpha.questionUrl : ''}
+                    href={this.props.alpha ? this.props.alpha.questionUrl : ''} className="w-max btn btn-border-grad text-brand-700"
                   >
-                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </a>
                   </Link>
-                  <Link href="/questions#alpha-questions">
-                    <a className="w-max btn btn-border-grad text-brand-700">
+                  <Link href="/questions#alpha-questions" className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </a>
                   </Link>
                 </div>
               </div>
@@ -111,16 +103,12 @@ export default class QOD extends React.Component<
                 </p>
                 <div className="flex flex-row justify-between mt-8 mx-3 gap-3  uppercase tracking-widest ">
                   <Link
-                    href={this.props.beta ? this.props.beta.questionUrl : ''}
+                    href={this.props.beta ? this.props.beta.questionUrl : ''} className="w-max btn btn-border-grad text-brand-700"
                   >
-                    <a className="w-max btn btn-border-grad text-brand-700">
                       Solve
-                    </a>
                   </Link>
-                  <Link href="questions/#beta-questions">
-                    <a className="w-max btn btn-border-grad text-brand-700">
+                  <Link href="questions/#beta-questions" className="w-max btn btn-border-grad text-brand-700">
                       More
-                    </a>
                   </Link>
                 </div>
               </div>

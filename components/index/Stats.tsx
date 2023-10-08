@@ -2,16 +2,23 @@ import React from 'react';
 
 export default function Stats(props) {
   function getStars() {
-    var sum = 0;
-    props.githubStats.map((element) => {
-      sum += element.stargazers_count;
-    });
-    return sum;
+    if (props.githubStats && Array.isArray(props.githubStats)) {
+      var sum = 0;
+      props.githubStats.map((element) => {
+        sum += element.stargazers_count;
+      });
+      return sum;
+    }
+    return 0; // Default value when githubStats is null or not an array
   }
 
   function getProjects() {
-    return props.githubStats.length;
+    if (props.githubStats && Array.isArray(props.githubStats)) {
+      return props.githubStats.length;
+    }
+    return 0; // Default value when githubStats is null or not an array
   }
+
   return (
     <div className="bg-[#040E17] mx-auto py-16">
       <div className="relative xl:px-20 lg:px-20 md:px-12 pt-10">
@@ -24,7 +31,7 @@ export default function Stats(props) {
         <div className="flex bg-black-800 w-4/5 flex-wrap mx-auto">
           <div className="w-full xl:w-3/12 lg:w-3/12 sm:w-3/12 md:w-3/12  pt-8 pb-8">
             <p className="text-5xl font-bold text-center text-brand-500 pb-1">
-              {typeof props.githubStats !== 'string' ? getProjects() : ''}
+              {getProjects()}
             </p>
             <p className="text-2xl text-gray-400 text-center font-normal">
               Projects
@@ -32,7 +39,7 @@ export default function Stats(props) {
           </div>
           <div className="w-full xl:w-3/12 lg:w-3/12 sm:w-3/12 md:w-3/12 pt-8 pb-8">
             <p className="text-5xl font-bold text-center text-brand-500 pb-1">
-              {typeof props.githubStats !== 'string' ? getStars() : ''}
+              {getStars()}
             </p>
             <p className="text-2xl text-gray-400 text-center font-normal">
               Github stars

@@ -14,10 +14,10 @@ export default function Custom404() {
             Looks like you are lost!
           </h1>
 
-          <Link href="/">
-            <a className="w-max btn btn-border-grad text-brand-700">
+          <Link href="/" className="w-max btn btn-border-grad text-brand-700">
+            {/* <a className="w-max btn btn-border-grad text-brand-700"> */}
               Go Back To Home
-            </a>
+            {/* </a> */}
           </Link>
         </div>
       </div>

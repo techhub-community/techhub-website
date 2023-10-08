@@ -12,20 +12,20 @@ import CustomLoader from '@/components/Global/CustomLoader';
 import getCurrentDate, { getNextDate, isPastQODTime } from '@/common/helpers';
 import getTechhubStats from '@/apis/github';
 import getQuestions from '@/apis/questions';
+
 interface HomeState {
   githubStats: any;
-  data: any;
   alpha: any;
   beta: any;
   basics: any;
   loading: boolean;
 }
+
 export default class Home extends React.Component<{}, HomeState> {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: '',
       alpha: null,
       beta: null,
       basics: null,
@@ -33,76 +33,83 @@ export default class Home extends React.Component<{}, HomeState> {
       githubStats: null,
     };
   }
+
   componentDidMount = async () => {
-    var currentDate;
-    if (isPastQODTime()) {
-      currentDate = getNextDate();
-    } else {
-      currentDate = getCurrentDate();
-    }
+    // Determine the currentDate based on your logic
+    var currentDate = isPastQODTime() ? getNextDate() : getCurrentDate();
 
-    var questions = await getQuestions();
+    try {
+      // Fetch questions
+      var questions = await getQuestions();
 
-    //Get Alpha Question of the day
-    var alphaDto = questions['alpha'].filter(function (item) {
-      return item.questionDate === currentDate;
-    });
-    this.setState({
-      alpha: alphaDto[0],
-    });
+      // Filter and set Alpha Question of the day
+      if (questions['alpha']) {
+        var alphaDto = questions['alpha'].filter(function (item) {
+          return item.questionDate === currentDate;
+        });
+        this.setState({
+          alpha: alphaDto[0],
+        });
+      }
 
-    //Get beta question of the day
-    var betaDto = questions['beta'].filter(function (item) {
-      return item.questionDate === currentDate;
-    });
-    this.setState({
-      beta: betaDto[0],
-    });
+      // Filter and set Beta Question of the day
+      if (questions['beta']) {
+        var betaDto = questions['beta'].filter(function (item) {
+          return item.questionDate === currentDate;
+        });
+        this.setState({
+          beta: betaDto[0],
+        });
+      }
 
-    //Get basics question of the day
-    var basicsDto = questions['basics'].filter(function (item) {
-      return item.questionDate === currentDate;
-    });
-    this.setState({
-      basics: basicsDto[0],
-    });
+      // Filter and set Basics Question of the day
+      if (questions['basics']) {
+        var basicsDto = questions['basics'].filter(function (item) {
+          return item.questionDate === currentDate;
+        });
+        this.setState({
+          basics: basicsDto[0],
+        });
+      }
 
-    var gitStats = await getTechhubStats();
+      // Fetch GitHub stats
+      var gitStats = await getTechhubStats();
 
-    if (gitStats !== 'Error') {
+      if (gitStats !== 'Error') {
+        this.setState({
+          githubStats: gitStats,
+        });
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
       this.setState({
-        githubStats: gitStats,
+        loading: false,
       });
     }
-
-    this.setState({
-      loading: false,
-    });
   };
+
   render() {
     return (
       <>
-        {!this.state.loading ? (
-          <div>
-            <Head>
-              <title>Home - TechHub :: Community</title>
-            </Head>
-            <Navbar />
-            <Hero />
-            <QOD
-              alpha={this.state.alpha}
-              beta={this.state.beta}
-              basics={this.state.basics}
-            />
-            <Stats githubStats={this.state.githubStats} />
-            <LLT />
-            <CTA />
-            <Team />
-            <Footer />
-          </div>
-        ) : (
-          <CustomLoader />
-        )}
+        <div>
+          <Head>
+            <title>Home - TechHub :: Community</title>
+          </Head>
+          <Navbar />
+          <Hero />
+          <QOD
+            alpha={this.state.alpha}
+            beta={this.state.beta}
+            basics={this.state.basics}
+          />
+          <Stats githubStats={this.state.githubStats} />
+          <LLT />
+          <CTA />
+          <Team />
+          <Footer />
+        </div>
+        {this.state.loading && <CustomLoader />}
       </>
     );
   }

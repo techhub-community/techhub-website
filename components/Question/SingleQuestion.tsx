@@ -38,9 +38,11 @@ export default class SingleQuestion extends React.Component<
           </div>
           <div className="zoom">
             <Link
-              href={this.props.details ? this.props.details.questionUrl : ''}
+              href={this.props.details ? this.props.details.questionUrl : ''} className="btn btn-grad text-white w-max "
             >
-              <a className="btn btn-grad text-white w-max ">Solve Now</a>
+              {/* <a className="btn btn-grad text-white w-max "> */}
+                Solve Now
+                {/* </a> */}
             </Link>
           </div>
         </div>
