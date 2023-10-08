@@ -18,13 +18,11 @@ export default function Hero() {
         </p>
         <div className="mb-6 md:hidden">
           <Link href="https://kutt.it/techhub-invite">
-            <a>
               <img
                 alt="Discord"
                 className="h-8"
                 src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
               />
-            </a>
           </Link>
         </div>
       </div>

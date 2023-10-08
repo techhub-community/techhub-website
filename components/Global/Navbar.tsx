@@ -27,25 +27,17 @@ const Navbar = () => {
           </span>
         </Link>
         <div className="hidden ml-[10%] md:flex uppercase tracking-widest gap-7 justify-between cursor-pointer">
-          <Link href="/">
-            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+          <Link href="/" className="text-black-600 hover:text-brand-700 hover:text-bold">
               Home
-            </a>
           </Link>
-          <Link href="/blogs">
-            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+          <Link href="/blogs" className="text-black-600 hover:text-brand-700 hover:text-bold">
               Blogs
-            </a>
           </Link>
-          <Link href="/events">
-            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+          <Link href="/events" className="text-black-600 hover:text-brand-700 hover:text-bold">
               Events
-            </a>
           </Link>
-          <Link href="/contributors">
-            <a className="text-black-600 hover:text-brand-700 hover:text-bold">
+          <Link href="/contributors" className="text-black-600 hover:text-brand-700 hover:text-bold">
               Contributors
-            </a>
           </Link>
         </div>
 
@@ -53,39 +45,27 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <div className="flex flex-row gap-3 place-items-center mr-4">
               <Link href="https://www.facebook.com/official.techhub.community">
-                <a>
                   <IoLogoFacebook className="text-xl hover:text-brand-500" />
-                </a>
               </Link>
               <Link href="https://www.instagram.com/techhub_community/">
-                <a>
                   <IoLogoInstagram className="text-xl hover:text-brand-500" />
-                </a>
               </Link>
               <Link href="https://www.twitter.com/_techhub/">
-                <a>
                   <IoLogoTwitter className="text-xl hover:text-brand-500" />
-                </a>
               </Link>
               <Link href="https://www.linkedin.com/company/techhub-community">
-                <a>
                   <IoLogoLinkedin className="text-xl hover:text-brand-500" />
-                </a>
               </Link>
               <Link href="https://github.com/techhub-community/">
-                <a>
                   <IoLogoGithub className="text-xl hover:text-brand-500" />
-                </a>
               </Link>
             </div>
             <Link href="https://kutt.it/techhub-invite">
-              <a>
                 <img
                   alt="Discord"
                   className="zoom"
                   src="https://img.shields.io/discord/814219041614594078?color=%23c31265&label=Discord&style=for-the-badge"
                 />
-              </a>
             </Link>
           </div>
 
@@ -127,39 +107,29 @@ const Navbar = () => {
             >
               <ul className="py-2">
                 <Link href="/">
-                  <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Home
                     </li>
-                  </a>
                 </Link>
                 <Link href="/blogs">
-                  <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Blogs
                     </li>
-                  </a>
                 </Link>
                 <Link href="/events">
-                  <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Events
                     </li>
-                  </a>
                 </Link>
                 <Link href="/contributors">
-                  <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Contributors
                     </li>
-                  </a>
                 </Link>
                 <Link href="https://kutt.it/techhub-invite">
-                  <a>
                     <li className="px-6 py-2 bg-gray-50 hover:bg-brand-600 hover:text-white">
                       Join Discord
                     </li>
-                  </a>
                 </Link>
               </ul>
             </div>
